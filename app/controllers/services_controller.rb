@@ -1,0 +1,2 @@
+class ServicesController < ResourceController
+end

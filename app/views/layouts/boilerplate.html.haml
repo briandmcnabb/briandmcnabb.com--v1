@@ -1,0 +1,34 @@
+- content_for :boilerplate do
+	%head
+		%meta{ :charset => "utf-8" }/
+		%meta{ 'http-equiv' => "X-UA-Compatible", :content => "IE=edge,chrome=1"}/
+		
+		%title= content_for?(:title) ? yield(:title) : "Brian McNabb"
+		
+		%meta{ :name => "description", :content => "Brian McNabb" }/
+		%meta{ :name => "author", :content => "Brian McNabb" }/
+		
+		%meta{ :name => "viewport", :content => "width=device-width, initial-scale=1" }/
+	 
+		= favicon_link_tag 'favicon.ico'
+		= favicon_link_tag 'apple_touch_icon.png', :rel => 'apple-touch-icon', :type => 'image/png'
+	
+		= stylesheet_link_tag 'application'
+		= javascript_include_tag 'modernizr'	
+		= csrf_meta_tags
+	
+	
+	%body
+		- flash.each do |name, msg|
+			= content_tag :div, msg, :id => "flash_#{name}"
+		- flash.clear
+		
+		= yield(:content)
+	
+		
+		= javascript_include_tag 'application'
+		= yield(:javascript)
+		= render 'layouts/ga_snippet'
+		= render 'layouts/chrome_frame_snippet'
+			
+= parent_layout 'html_tags'

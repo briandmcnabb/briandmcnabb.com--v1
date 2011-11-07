@@ -1,0 +1,17 @@
+section.service { margin-bottom: 45px; padding-bottom: 15px; border-bottom: 1px dotted hsla(0, 0%, 0%, 0.25);
+	figure { float: left; margin: 0 15px; }
+	header { float: left; width: 600px; margin-bottom: 15px; background: hsla(0, 0%, 100%, .60) image-url('bg_pattern_2.png') repeat; border: 1px solid hsla(0, 0%, 0%, 0.045);
+					-webkit-border-radius: 0 0 52px 0; 
+						 -moz-border-radius: 0 0 52px 0; 
+									border-radius: 0 0 52px 0;
+		h1 { margin: .5em; font-family: 'Museo_Slab_500'; font-size: 1.75em; }
+	}
+	.column_1 { float: left; width: 300px; margin: 0 30px 0 15px; padding-right: 15px; border-right: 1px dashed #222;
+		p { height: 8em; font-family: 'quicksand_book', sans-serif; }
+	}
+	.column_2 { float: left; width: 300px; margin-left: 15px;
+		h2 { margin: 0; }
+		ul { margin: 1em 0; padding: 0; list-style-type: circle; font-family: 'courier new', courier; }
+	}
+}
+section.service:last-of-type { border: none;  padding: 0;}

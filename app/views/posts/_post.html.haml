@@ -1,0 +1,7 @@
+- present post do |present_post|	
+	%article.clearfix[post]
+		%footer= present_post.big_publish_date
+		%header
+			%h1= link_to post.title, post_path(post)
+			%h2= post.sub_title
+		%p= present_post.abbr_body

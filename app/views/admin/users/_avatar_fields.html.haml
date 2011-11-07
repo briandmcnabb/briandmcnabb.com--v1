@@ -1,0 +1,5 @@
+= image_tag(resource.avatar.asset_path_url(:thumb)) if resource.avatar && resource.avatar.asset_path?
+= f.input :asset_path, :label => false
+= f.input :asset_path_cache, :as => :hidden
+- unless resource.new_record?
+	= f.input :remove_asset_path, :label => "remove", :as => :boolean

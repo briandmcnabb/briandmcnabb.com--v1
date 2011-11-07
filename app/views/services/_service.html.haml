@@ -1,0 +1,11 @@
+%section.clearfix[service]
+	%figure
+		= image_tag "http://placehold.it/200x200", alt: "#{service.name.downcase}"
+	%header
+		%h1= service.name
+	.column_1
+		%p= service.description
+	.column_2
+		%ul
+			- service.skills.each do |skill|
+				%li= skill.name

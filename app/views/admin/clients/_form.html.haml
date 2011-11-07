@@ -1,0 +1,22 @@
+= simple_nested_form_for [ :admin, resource ], url: resource_path, html: { multipart: true} do |f|
+	.clearfix	
+		%fieldset#parent_form
+			= f.input :organization
+			= f.input :first_name  		
+			= f.input :last_name   
+			= f.input :email       
+			= f.input :url         
+			= f.input :description 
+		%fieldset#child_form
+			%legend= "Project#{'s' if resource.projects.count > 1}"
+			= f.simple_fields_for :projects
+			= f.link_to_add( "add a project", :projects)
+	= f.button :submit, "submit"
+	
+	
+	
+
+
+
+
+

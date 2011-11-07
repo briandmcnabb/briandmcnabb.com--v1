@@ -1,0 +1,11 @@
+- title "Portfolio"
+
+
+%section#client
+	.carousel
+		=render collection
+
+
+- content_for :javascript do
+	:javascript
+		$('#client').contentcarousel();

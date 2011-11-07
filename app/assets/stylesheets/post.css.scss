@@ -1,0 +1,19 @@
+article.post { background: #f8f8f8; margin-bottom: 15px;
+	header { background: #222; padding: 5px;
+		h1 { margin: 0; font-size: 2.0em; font-family: 'Museo_Slab_500', sans-serif;
+			a { color: #ecf0d7; text-decoration: none; }
+			a:hover { color: #ffe395; }
+		}
+		h2 { margin: 0; color: #ecf0d7; font-size: 1.5em; font-family: 'quicksand_book', sans-serif; }
+	}
+	p { margin: 0 75px; padding: 5px;}
+	footer { float: left; margin: 0 10px 0 0; padding: 0 10px; background: #adcfaa; background-image: image-url('bg_pattern_1.png'); background-repeat:repeat; 
+					 border-top:		0px solid #222; 
+					 border-right:	0px solid #222; 
+					 border-bottom: 0px solid #222;
+					 border-left:		0px solid #222;
+		.strftime-b { font-size: 4.5em; font-family: 'deming_ep'; }
+		.strftime-d { margin: -35px 0; font-size: 10em; font-family: 'pompadour'; }
+		.strftime-Y { font-size: 4.5em; font-family: 'deming_ep'; }				
+	}
+}

@@ -1,0 +1,21 @@
+- content_for :content do
+	#container
+		%section#masthead.clearfix
+			%header.clearfix
+				%h1= yield(:title) if show_title?
+				%nav.horizontal
+					%ul
+						- unless current_page?(posts_path)	
+							%li= link_to "blog", posts_path
+						- unless current_page?(user_path)	
+							%li= link_to "about", user_path
+						- unless current_page?(clients_path)	
+							%li= link_to "work", clients_path
+						- unless current_page?(services_path)	
+							%li= link_to "services", services_path
+	
+		= content_for?(:body) ? yield(:body) : yield
+			
+		%footer
+	
+= parent_layout 'boilerplate'        

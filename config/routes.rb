@@ -1,0 +1,29 @@
+Briandmcnabb::Application.routes.draw do
+
+  # Backend Administrative Interface
+  constraints :subdomain => "admin" do
+    scope :module => "admin", :as => "admin" do
+      resources :services do
+        resources :skills
+      end
+      resources :clients do
+        resources :projects
+      end
+      resources :projects
+      resources :inquiries
+      resources :posts
+      resource :user
+      root :to => "posts#index"
+    end
+  end
+
+  devise_for :user#, :skip => :registrations
+  resource  :user, :only => :show
+  resources :clients, :only => [:index, :show]
+  resources :posts, :only => [:index, :show]
+  resources :services, :only => [:index, :show]
+
+  # Dynamic Root Route
+  root :to => "users#show"
+  
+end

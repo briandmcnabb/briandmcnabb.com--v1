@@ -1,0 +1,8 @@
+- title resource.class
+.block
+  .content
+    %h2 New #{resource_class.model_name.human}
+
+    .inner
+      - attributes = resource_class.attribute_names - %w(id created_at updated_at)
+      = render "form", attributes: attributes

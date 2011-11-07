@@ -1,0 +1,167 @@
+/*
+ * This is a manifest file that'll automatically include all the stylesheets available in this directory
+ * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
+ * the top of the compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require boilerplate_p1
+ *= require base_styles
+ *= require coderay
+ *= require_self
+ *= require_tree . 
+ *= require boilerplate_p2
+ *
+*/
+
+
+/*----------------------------------
+  Fonts
+---------------------------------*/
+
+@font-face {
+	font-family: 'airplane';
+	src: font-url('airplane-webfont.eot');
+	src: local('☺'), font-url('airplane-webfont.woff') format('woff'), 
+					 font-url('airplane-webfont.ttf') format('truetype'),
+					 font-url('airplane-webfont.svg#webfontOfIwU6Fp') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'outage';
+	src: font-url('outage-webfont.eot');
+	src: local('☺'), font-url('outage-webfont.woff') format('woff'), 
+					 font-url('outage-webfont.ttf') format('truetype'),
+					 font-url('outage-webfont.svg#webfontOfIwU6Fp') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'pompadour';
+	src: font-url('pompadour-webfont.eot');
+	src: local('☺'), font-url('pompadour-webfont.woff') format('woff'), 
+					 font-url('pompadour-webfont.ttf') format('truetype'),
+					 font-url('pompadour-webfont.svg#webfontOfIwU6Fp') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'deming_ep';
+	src: font-url('deming_ep-webfont.eot');
+	src: local('☺'), font-url('deming_ep-webfont.woff') format('woff'), 
+					 font-url('deming_ep-webfont.ttf') format('truetype'),
+					 font-url('deming_ep-webfont.svg#webfontOfIwU6Fp') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'quicksand_light';
+	src: font-url('quicksand_light-webfont.eot');
+	src: local('☺'), font-url('quicksand_light-webfont.woff') format('woff'), 
+					 font-url('quicksand_light-webfont.ttf') format('truetype'),
+					 font-url('quicksand_light-webfont.svg#webfontOfIwU6Fp') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'quicksand_book';
+	src: font-url('quicksand_book-webfont.eot');
+	src: local('☺'), font-url('quicksand_book-webfont.woff') format('woff'), 
+					 font-url('quicksand_book-webfont.ttf') format('truetype'),
+					 font-url('quicksand_book-webfont.svg#webfontOfIwU6Fp') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Museo_Slab_500';
+	src: font-url('Museo_Slab_500-webfont.eot');
+	src: local('☺'), font-url('Museo_Slab_500-webfont.woff') format('woff'), 
+					 font-url('Museo_Slab_500-webfont.ttf') format('truetype'),
+					 font-url('Museo_Slab_500-webfont.svg#webfontOfIwU6Fp') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+/*----------------------------------
+  Layout Styles
+---------------------------------*/
+
+body {
+	background-color: #ecf0d7;
+}
+
+#container { width: 960px; margin: 50px auto 25px; }
+
+#container:before {
+	content: ""; display: block; margin-bottom: -41px; width: 100%; height: 37px;
+	background: #409397;
+	background: -webkit-linear-gradient(top, #adcfaa 0, #adcfaa 40%, transparent 40%, transparent 60%, #409397 60%, #409397 100%);
+	background:    -moz-linear-gradient(top, #adcfaa 0, #adcfaa 40%, transparent 40%, transparent 60%, #409397 60%, #409397 100%);
+	background:      -o-linear-gradient(top, #adcfaa 0, #adcfaa 40%, transparent 40%, transparent 60%, #409397 60%, #409397 100%);
+	background:     -ms-linear-gradient(top, #adcfaa 0, #adcfaa 40%, transparent 40%, transparent 60%, #409397 60%, #409397 100%);
+	background:         linear-gradient(top, #adcfaa 0, #adcfaa 40%, transparent 40%, transparent 60%, #409397 60%, #409397 100%);
+ /*
+ -webkit-mask-image: image-url('mask-image.png');
+		 	-o-mask-image: image-url('mask-image.png');
+	  -moz-mask-image: image-url('mask-image.png');
+  			 mask-image: image-url('mask-image.png');
+ */
+}
+
+#container:after {
+	content: ""; display: block; width: 100%; height: 75px;
+	background: #409397;
+	background: -webkit-linear-gradient(top, #adcfaa 0, #adcfaa 20%, transparent 20%, transparent 40%, #409397 40%, #409397 60%, transparent 60%, transparent 80%, #17395c 80%, #17395c 100%);
+	background:    -moz-linear-gradient(top, #adcfaa 0, #adcfaa 20%, transparent 20%, transparent 40%, #409397 40%, #409397 60%, transparent 60%, transparent 80%, #17395c 80%, #17395c 100%);
+	background:      -o-linear-gradient(top, #adcfaa 0, #adcfaa 20%, transparent 20%, transparent 40%, #409397 40%, #409397 60%, transparent 60%, transparent 80%, #17395c 80%, #17395c 100%);
+	background:     -ms-linear-gradient(top, #adcfaa 0, #adcfaa 20%, transparent 20%, transparent 40%, #409397 40%, #409397 60%, transparent 60%, transparent 80%, #17395c 80%, #17395c 100%);
+	background:         linear-gradient(top, #adcfaa 0, #adcfaa 20%, transparent 20%, transparent 40%, #409397 40%, #409397 60%, transparent 60%, transparent 80%, #17395c 80%, #17395c 100%);
+		 -moz-background-clip: padding; 
+	-webkit-background-clip: padding-box; 
+					background-clip: padding-box;	
+		-webkit-border-radius: 0 0 75px 75px; 
+			 -moz-border-radius: 0 0 75px 75px; 
+						border-radius: 0 0 75px 75px;
+ /*
+			 -webkit-mask-image: image-url('mask-image.png');
+			 		 	-o-mask-image: image-url('mask-image.png');
+			 	  -moz-mask-image: image-url('mask-image.png');
+							 mask-image: image-url('mask-image.png');
+ */
+}
+
+#masthead {
+	header { margin-bottom: 45px; padding: 0;
+		h1 { float: left; position: relative; margin: 2px 0 0 15px; padding: 0 5px; background: #ecf0d7; font-size: 4em; font-family: 'outage', sans-serif; line-height: 1em; }
+		nav { float: right; position: relative; margin-top: 0px; background: #ecf0d7; padding-left: 46px; border-left: 5px solid #222; }
+		nav li { padding: 0 1px; }
+		nav:before { content: ''; display: block; position: absolute; top: -2px; left: 6px; height: 48px; width: 10px; background: #222; }
+		nav:after  { content: ''; display: block; position: absolute; top: -4px; left: 22px; height: 52px; width: 20px; background: #222; }
+		nav li:first-child:before {  content: ''; display: block; position: absolute; top: -2px; left: -15px; height: 48px; width: 10px; background: #ecf0d7; }
+		nav li:last-child { padding-right: 0; }
+		nav a { margin-top: 10px; padding: 0.37em 0.45em 0.36em; color: #ecf0d7; background: #222; font-family: 'airplane', sans-serif; font-size: 2.308em; line-height: 1.5em;			
+		  -webkit-transition: all 0.3s ease-out;
+		     -moz-transition: all 0.3s ease-out;
+		      -ms-transition: all 0.3s ease-out;
+		       -o-transition: all 0.3s ease-out;
+		          transition: all 0.3s ease-out;
+		}
+		nav a:hover { color: #d45848; } 
+	}
+	header:after { content: ""; display: block; width: 100%; height: 15px; background: #17395c;
+ /*
+								 -webkit-mask-image: image-url('mask-image.png');
+	 							 -o-mask-image: image-url('mask-image.png');
+								 -moz-mask-image: image-url('mask-image.png');
+			 					 mask-image: image-url('mask-image.png'); 
+	*/
+	}
+}
+
+footer { margin: 12px 0; }

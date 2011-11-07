@@ -1,0 +1,39 @@
+.CodeRay {
+	width: 95%;
+	margin: 5px auto;
+	padding: 5px;
+	border: 1px solid #ddd;
+	-webkit-box-shadow: rgba(0,0,0,0.07) 0 1px 2px inset;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+  font-family: 'Menlo', 'Courier New', 'Terminal', monospace;
+  background-color: #eee;
+  color: #333;
+	
+	pre { margin: 0px; padding: 0px; }
+
+	.attribute-name { color:#008080; }
+	.comment  { color:#999988; font-style:italic; }
+	.class { color:#445588; font-weight:bold; }
+	.constant { color:#008080; }
+	.float { color:#009999; }
+	.function { color:#0086B3; }
+	.integer  { color:#009999 }
+	.local-variable { color:#D0CFFE; }
+	.doctype { color:#999; font-weight:bold; }
+	.keyword { color:#CB7832; font-weight:bold;}
+	.regexp { color:#009926; }
+	.string  { color:#DD1144; }
+	.symbol { color:#990073; }
+	.tag { color:#000080; }
+	.predefined-constant { color:#000; font-weight:bold; }
+	
+	
+/*	inline
+	.inline { color:#0086B3 }   
+	.inline-delimiter { color:#DD1144;}
+	.delimiter { color:#DD1144; }
+	char { color:#DD1144; }
+	content { color:#DD1144; } */
+}

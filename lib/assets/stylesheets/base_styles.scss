@@ -1,0 +1,198 @@
+/*----------------------------------
+  Flash Messages
+---------------------------------*/
+#flash_notice, #flash_error, #flash_alert { font-size: 1.5em; text-align: center;} 
+#flash_notice { background-color: #CFC; border-bottom: 5px solid #6C6; }
+#flash_error, #flash_alert { background-color: #FCC; border-bottom: 5px solid #C66; }
+
+
+/*----------------------------------
+  Definition lists
+---------------------------------*/
+nav a { text-decoration: none; }
+nav.horizontal ul { text-align: center; }
+nav.horizontal li { display: inline; }
+
+
+/*----------------------------------
+  Definition lists
+---------------------------------*/
+dl {
+	margin: 0;
+}
+dt {
+	clear: left;
+	float: left;
+	font-weight: bold;
+	margin: 5px 0; /* Make sure the virtical margins match those of the dd tag. */
+	padding-right: 10px;
+	text-align: right;
+	width: 150px;
+}
+dd {
+	float: left;
+	margin: 5px 0; /* Make sure the virtical margins match those of the dt tag. */
+	width: 500px;
+}
+
+
+
+
+/*----------------------------------
+  Table
+---------------------------------*/
+table.backend	{ background: hsla(0, 0%, 0%, 0.05); border-collapse: collapse; width: 100%;
+	th { background: #eaeaea; background-image: image-url('bg_pattern_1.png'); background-repeat:repeat; color: #222; padding: 10px; text-align: left;
+		.current { background-position: right center; background-repeat: no-repeat; padding-right: 22px; }
+		.asc  { background-image: image-url("asc_sort_icon.gif"); }
+		.desc { background-image: image-url("desc_sort_icon.gif"); }
+	}
+	td { border-top: 1px solid hsla(0, 0%, 100%, 0.25); padding: 0.8em; }
+	td.icon_link { line-height: 1.8em ; padding: 0.6em 0.3em 0.4em 0.3em; width: 24px; }
+	.show 	 { background-image: image_url('show_icon.png'); }
+	.edit 	 { background-image: image_url('edit_icon.png'); }
+	.destroy { background-image: image_url('destroy_icon.png'); }
+	tr.even { background: hsla(0, 0%, 100%, 0.25); }
+}
+
+
+
+
+/*----------------------------------
+  Form
+---------------------------------*/
+input[type="color"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="range"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"],
+textarea {
+  width: 290px;
+  color: #222;
+  padding: 10px;
+  border: 1px solid  hsla(0, 0%, 100%, 0.2);
+	-webkit-appearance: none;
+}
+
+input[type="file"] {
+	float: left;
+}
+
+.simple_form input[type='submit'] {
+  margin-left: 110px;
+	height: 35px;
+	width: 85px;
+	background-color: #d14b3a;
+	padding-top: 4px;
+	border: none;
+	color: #222;
+	font-family: 'quicksand';
+	font-size: 1.1em;
+	-webkit-appearance: none;	
+}
+
+select {
+	width: 300px;
+	margin: 3px 0px;
+	font-size: 24px;
+}
+
+.simple_form div.input {
+  margin-bottom: 15px;
+}
+
+.simple_form label {
+  float: left;
+	margin-top: 10px;
+	margin-right: 10px;
+  width: 100px;
+	font-weight: bold;
+  text-align: right;
+
+}
+
+div.boolean {
+  margin-left: 120px;
+}
+
+div.boolean label, label.collection_radio {
+  float: none;
+  margin: 0;
+}
+
+label.collection_radio {
+  margin-right: 10px;
+  vertical-align: -2px;
+  margin-left:   2px;
+}
+
+.field_with_errors {
+  background-color: #ff3333;
+}
+
+.simple_form .error {
+  clear:   left;
+  color:   black;
+  display: block;
+  margin-left: 120px;
+  font-size:    12px;
+}
+
+.simple_form .hint {
+  clear: left;
+  margin-left: 120px;
+  font-size:    12px;
+  color: #555;
+  display: block;
+  font-style: italic;
+}
+
+input.radio {
+  margin-right: 5px;
+  vertical-align: -3px;
+}
+
+input.check_boxes {
+  margin-left: 3px;
+  vertical-align: -3px;
+}
+
+label.collection_check_boxes {
+  float: none;
+  margin: 0;
+  vertical-align: -2px;
+  margin-left:   2px;
+}
+
+a.add_nested_fields { 
+	display: block;
+	margin-left: 120px;
+}
+
+fieldset#left_column { float: left; margin-right: 25px; padding-right: 25px; border-right: 1px solid hsla(0, 0%, 100%, 0.6); }
+fieldset#right_column { width: 465px; background: transparent image-url('bg_pattern_3') repeat; padding-top: 20px; border-top: 1px solid hsla(0, 0%, 100%, 0.75); 
+	.fields:last-of-type { border: none; }
+}
+legend { margin-left: 10px; padding: 9px 10px; border: 1px solid hsla(0, 0%, 0%, 0.03); background: hsla(0, 0%, 100%, 0.6) image-url('bg_pattern_2.png') repeat; font-size: 1.25em; font-weight: bold; }
+
+.fields { position: relative; margin-bottom: 10px; background: hsla(0, 0%, 0%, 0.05) image-url('bg_pattern_2.png') repeat; padding: 10px 0; border: 1px solid hsla(0, 0%, 0%, 0.005); 
+	.remove_nested_fields { position: absolute; top: -10px; right: -10px; background: transparent image-url('remove_icon.png') no-repeat center center; width:27px; height:27px; text-indent:-999em; opacity: 0.25; }
+	.remove_nested_fields:hover { opacity: 1; }
+	.one_liner { top: 25%; right: 5px; }
+	.boolean { display: inline; margin: 25px 0 0 0; }
+	div.file { float: left; margin: 20px 0 0 20px; }
+	img{ 	float: left; margin: -6px 20px 0 5px; border: 1px solid hsla( 0, 0%, 100%, 0.5);} 
+}
+
+a.add_nested_fields { display: inline-block; width: 312px; margin-left: 110px; background: #d14b3a; padding-top: 5px; color: #222; text-align: center; font-family: 'airplane', sans-serif; font-size: 2.308em; line-height: 1.5em; }
+

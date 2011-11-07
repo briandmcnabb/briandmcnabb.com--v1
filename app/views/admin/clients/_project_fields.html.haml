@@ -1,0 +1,6 @@
+= f.input :title
+= f.input :description
+= f.input :url
+= f.simple_fields_for :images
+= f.link_to_add( "add an image", :images)
+= f.link_to_remove "remove"

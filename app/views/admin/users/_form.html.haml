@@ -1,0 +1,12 @@
+= simple_nested_form_for [ :admin, resource ], url: resource_path, html: { multipart: true} do |f|
+	.clearfix	
+		%fieldset#left_column
+			= f.input :first_name
+			= f.input :last_name
+			= f.input :email
+			= f.input :description
+		%fieldset#right_column
+			%legend Avatar
+			= f.simple_fields_for :avatar, :class => "avatar"
+			= f.link_to_add( "add an avatar", :avatar) unless resource.avatar
+	= f.button :submit, "submit"

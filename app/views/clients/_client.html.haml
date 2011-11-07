@@ -1,0 +1,11 @@
+%article[client]
+	%header
+		= image_tag "http://placehold.it/269x269", alt: "#{client.organization}"
+		%h1= client.organization
+		= link_to 'more...', '#', :class => 'expand'
+	%section.content
+		.content-wrapper
+			%h1= client.organization
+			=link_to 'close', '#', :class => 'collapse'
+			.text-wrapper
+				%p= client.description

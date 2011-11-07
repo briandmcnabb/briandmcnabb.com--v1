@@ -1,0 +1,15 @@
+= simple_nested_form_for [ :admin, resource ] do |f|
+	.clearfix	
+		%fieldset#left_column
+			= f.input :name
+			= f.input :description
+		%fieldset#right_column
+			= f.simple_fields_for :avatar, :class => "avatar"
+			= f.link_to_add( "Add an avatar", :avatar) unless resource.avatar
+	.clearfix	
+		%fieldset#left_column
+			%legend Skills
+			= f.simple_fields_for :skills
+			= f.link_to_add "add a skill", :skills
+	= f.button :submit, "submit"
+		
