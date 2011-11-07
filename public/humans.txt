@@ -3,18 +3,18 @@
 
 
 /* TEAM */
-  <your title>: <your name>
-  Site:
-  Twitter:
-  Location:
+  Developer: Brian McNabb
+  Site: briandmcnabb.com
+  Twitter: @briandmcnabb
+  Location: Brooklyn, NY
 
 /* THANKS */
   Names (& URL):
 
 /* SITE */
   Standards: HTML5, CSS3
-  Components: Modernizr, jQuery
-  Software:
+  Components: jQuery
+  Software: Ruby on Rails
 
 
 

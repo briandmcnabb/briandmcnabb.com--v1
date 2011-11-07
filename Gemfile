@@ -4,8 +4,6 @@ gem 'rails', '3.1.1'
 
 gem 'haml'
 gem 'jquery-rails'
-gem 'modernizr-rails'
-gem 'formalize-rails'
 
 gem 'inherited_resources'
 gem 'responders'
