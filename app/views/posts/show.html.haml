@@ -1,10 +1,4 @@
 - title "Blog"
+-# title "#{resource.title}: #{resource.sub_title}"
 
-- present resource do |present_post|	
-	%article.clearfix[resource]
-		%footer= present_post.big_publish_date
-		%header
-			%h1= link_to resource.title, resource_path(resource)
-			%h2= resource.sub_title
-		%p= present_post.body
-	
+= render resource

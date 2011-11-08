@@ -1,7 +1,16 @@
 - present post do |present_post|	
 	%article.clearfix[post]
-		%footer= present_post.big_publish_date
-		%header
-			%h1= link_to post.title, post_path(post)
-			%h2= post.sub_title
-		%p= present_post.abbr_body
+		.column_right
+			%header
+				%h1= link_to post.title, post_path(post)
+				%h2= post.sub_title
+			%p= current_page?(posts_path)	? present_post.abbr_body : present_post.body
+		%footer
+			= present_post.publish_date
+			- unless current_page?(posts_path)
+				#social_buttons
+					#twitter= share_on_twitter post_url(post), "briandmcnabb", "#{post.title}: #{post.sub_title}"
+					#google= google_plus_one post_url(post)
+					#facebook= like_on_facebook post_url(post)
+
+				

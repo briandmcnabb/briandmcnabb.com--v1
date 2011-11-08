@@ -38,51 +38,21 @@
 }
 
 @font-face {
-	font-family: 'pompadour';
-	src: font-url('pompadour-webfont.eot');
-	src: local('☺'), font-url('pompadour-webfont.woff') format('woff'), 
-					 font-url('pompadour-webfont.ttf') format('truetype'),
-					 font-url('pompadour-webfont.svg#webfontOfIwU6Fp') format('svg');
+	font-family: 'polaris';
+	src: font-url('polaris-webfont.eot');
+	src: local('☺'), font-url('polaris-webfont.woff') format('woff'), 
+					 font-url('polaris-webfont.ttf') format('truetype'),
+					 font-url('polaris-webfont.svg#webfontOfIwU6Fp') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
 
 @font-face {
-	font-family: 'deming_ep';
-	src: font-url('deming_ep-webfont.eot');
-	src: local('☺'), font-url('deming_ep-webfont.woff') format('woff'), 
-					 font-url('deming_ep-webfont.ttf') format('truetype'),
-					 font-url('deming_ep-webfont.svg#webfontOfIwU6Fp') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: 'quicksand_light';
-	src: font-url('quicksand_light-webfont.eot');
-	src: local('☺'), font-url('quicksand_light-webfont.woff') format('woff'), 
-					 font-url('quicksand_light-webfont.ttf') format('truetype'),
-					 font-url('quicksand_light-webfont.svg#webfontOfIwU6Fp') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: 'quicksand_book';
+	font-family: 'quicksand';
 	src: font-url('quicksand_book-webfont.eot');
 	src: local('☺'), font-url('quicksand_book-webfont.woff') format('woff'), 
 					 font-url('quicksand_book-webfont.ttf') format('truetype'),
 					 font-url('quicksand_book-webfont.svg#webfontOfIwU6Fp') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: 'Museo_Slab_500';
-	src: font-url('Museo_Slab_500-webfont.eot');
-	src: local('☺'), font-url('Museo_Slab_500-webfont.woff') format('woff'), 
-					 font-url('Museo_Slab_500-webfont.ttf') format('truetype'),
-					 font-url('Museo_Slab_500-webfont.svg#webfontOfIwU6Fp') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
