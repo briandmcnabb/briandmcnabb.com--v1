@@ -14,5 +14,5 @@ class Skill < ActiveRecord::Base
   belongs_to :user
   belongs_to :service
   
- attr_accessible :name
+  attr_accessible :name
 end
