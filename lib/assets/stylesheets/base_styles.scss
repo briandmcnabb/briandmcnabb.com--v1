@@ -179,19 +179,18 @@ a.add_nested_fields {
 	margin-left: 120px;
 }
 
-fieldset#left_column { float: left; margin-right: 25px; padding-right: 25px; border-right: 1px solid hsla(0, 0%, 100%, 0.6); }
-fieldset#right_column { width: 465px; background: transparent image-url('bg_pattern_3') repeat; padding-top: 20px; border-top: 1px solid hsla(0, 0%, 100%, 0.75); 
-	.fields:last-of-type { border: none; }
-}
+fieldset { margin-bottom: 50px; padding-top: 20px; border-top: 1px solid #fff; width: 465px; }
+fieldset#left_column { float: left; margin-right: 30px; }
 legend { margin-left: 10px; padding: 9px 10px; border: 1px solid hsla(0, 0%, 0%, 0.03); background: hsla(0, 0%, 100%, 0.6) image-url('bg_pattern_2.png') repeat; font-size: 1.25em; font-weight: bold; }
 
 .fields { position: relative; margin-bottom: 10px; background: hsla(0, 0%, 0%, 0.05) image-url('bg_pattern_2.png') repeat; padding: 10px 0; border: 1px solid hsla(0, 0%, 0%, 0.005); 
+	.fields { background: none; }
 	.remove_nested_fields { position: absolute; top: -10px; right: -10px; background: transparent image-url('remove_icon.png') no-repeat center center; width:27px; height:27px; text-indent:-999em; opacity: 0.25; }
 	.remove_nested_fields:hover { opacity: 1; }
 	.one_liner { top: 25%; right: 5px; }
 	.boolean { display: inline; margin: 25px 0 0 0; }
 	div.file { float: left; margin: 20px 0 0 20px; }
-	img{ 	float: left; margin: -6px 20px 0 5px; border: 1px solid hsla( 0, 0%, 100%, 0.5);} 
+	img { 	float: left; margin: -6px 20px 0 5px; border: 1px solid hsla( 0, 0%, 100%, 0.5);} 
 }
 
 a.add_nested_fields { display: inline-block; width: 312px; margin-left: 110px; background: #d14b3a; padding-top: 5px; color: #222; text-align: center; font-family: 'airplane', sans-serif; font-size: 2.308em; line-height: 1.5em; }

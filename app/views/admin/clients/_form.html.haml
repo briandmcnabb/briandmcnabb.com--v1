@@ -1,13 +1,18 @@
-= simple_nested_form_for [ :admin, resource ], url: resource_path, html: { multipart: true} do |f|
+= simple_nested_form_for [ :admin, resource ], html: { multipart: true} do |f|
 	.clearfix	
-		%fieldset#parent_form
+		%fieldset#left_column
+			%legend Client
 			= f.input :organization
-			= f.input :first_name  		
-			= f.input :last_name   
-			= f.input :email       
-			= f.input :url         
-			= f.input :description 
-		%fieldset#child_form
+			= f.input :first_name
+			= f.input :last_name
+			= f.input :email
+			= f.input :url
+			= f.input :description
+		%fieldset#right_column
+			%legend Logo
+			= f.simple_fields_for :client_logo
+			= f.link_to_add( "add logo", :client_logo) unless resource.client_logo
+		%fieldset#left_column
 			%legend= "Project#{'s' if resource.projects.count > 1}"
 			= f.simple_fields_for :projects
 			= f.link_to_add( "add a project", :projects)

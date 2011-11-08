@@ -7,6 +7,6 @@
 			= f.input :description
 		%fieldset#right_column
 			%legend Avatar
-			= f.simple_fields_for :avatar, :class => "avatar"
+			= f.simple_fields_for :avatar
 			= f.link_to_add( "add an avatar", :avatar) unless resource.avatar
 	= f.button :submit, "submit"

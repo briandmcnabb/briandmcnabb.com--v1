@@ -14,12 +14,15 @@
 #
 
 class Client < ActiveRecord::Base
+  # Accessors
+  attr_accessible :first_name, :last_name, :email, :url, :description, :client_logo_attributes, :project_attributes
+
   # Associations
-  has_one :image, :as => :attachable
+  has_one :client_logo, :as => :attachable
   has_many :projects
 
   # Nested Models
-  accepts_nested_attributes_for :image, :reject_if => :all_blank, :allow_destroy => true
+  accepts_nested_attributes_for :client_logo, :reject_if => :all_blank, :allow_destroy => true
   accepts_nested_attributes_for :projects, :reject_if => :all_blank, :allow_destroy => true
 
 
