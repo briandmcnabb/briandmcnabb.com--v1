@@ -1,0 +1,8 @@
+= render "show", attributes: attributes
+#projects
+	%h1 Projects
+	%ul
+		%li= link_to "Add a new project", new_admin_client_project_path(resource.id)
+		- resource.projects.each do |project|
+			%li= link_to project.title, admin_client_project_path(resource, project)
+		

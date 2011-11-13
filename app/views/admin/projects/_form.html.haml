@@ -1,0 +1,12 @@
+= simple_nested_form_for [ :admin, :client, resource ], html: { multipart: true} do |f|
+	.clearfix
+		%fieldset#left_column
+			%legend Project
+			= f.input :title
+			= f.input :url
+			= f.input :description
+		%fieldset#right_column
+			%legend Photos
+			= f.simple_fields_for :images
+			= f.link_to_add( "add an image", :images)
+	= f.button :submit, "submit"

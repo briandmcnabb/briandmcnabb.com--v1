@@ -16,6 +16,7 @@ class Service < ActiveRecord::Base
   # Associations
   has_one  :service_symbol, :as => :attachable, :dependent => :destroy
   has_many :skills, :dependent => :destroy
+  has_and_belongs_to_many :clients
 
   # Nested Models
   accepts_nested_attributes_for :service_symbol, :reject_if => :all_blank, :allow_destroy => true

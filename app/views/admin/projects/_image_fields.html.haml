@@ -1,5 +1,5 @@
 .clearfix
-	= image_tag(resource.client_logo.asset_path_url(:thumb)) if resource.client_logo && resource.client_logo.asset_path?
+	= image_tag(f.object.asset_path_url(:thumb)) if f.object.asset_path?
 	= f.input :asset_path, :label => false
 	= f.input :asset_path_cache, :as => :hidden
 	- unless resource.new_record?

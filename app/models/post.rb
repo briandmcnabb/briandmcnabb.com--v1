@@ -13,5 +13,9 @@
 #
 
 class Post < ActiveRecord::Base
+  # Accessors
+  attr_accessible :title, :sub_title, :body, :publish_date
+
+  # Associations
   belongs_to :user
 end

@@ -1,11 +1,23 @@
 - title "Portfolio"
 
+- content_for :head do
+	= stylesheet_link_tag 'pirobox'
 
+- content_for :javascript do
+	= javascript_include_tag 'pirobox'
+	:javascript
+		$(document).ready(function(){
+			$('#client').contentcarousel();
+			$().piroBox({
+		  	my_speed: 300, //animation speed
+		  	bg_alpha: 0.5, //background opacity
+		  	slideShow : 'true', // true == slideshow on, false == slideshow off
+		  	slideSpeed : 3, //slideshow 
+		  	close_all : '.piro_close' // add class .piro_overlay(with comma)if you want overlay click close piroBox
+		  });
+		});
+		
+		
 %section#client
 	.carousel
 		=render collection
-
-
-- content_for :javascript do
-	:javascript
-		$('#client').contentcarousel();

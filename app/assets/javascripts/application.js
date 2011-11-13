@@ -7,5 +7,8 @@
 //= require jquery
 //= require jquery-ui
 //= require jquery_ujs
-//= require plugins
+//= require jquery.autoSuggest
+//= require jquery.contentcarousel
+//= require nested_form
+//= require base_scripts
 //= require_tree .

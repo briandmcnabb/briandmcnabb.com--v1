@@ -14,7 +14,7 @@
 
 class Project < ActiveRecord::Base
   # Accessors
-  attr_accessible :title, :description, :url, :image_attributes
+  attr_accessible :title, :description, :url, :client_id, :images_attributes
 
   # Associations
   belongs_to :user
@@ -23,4 +23,5 @@ class Project < ActiveRecord::Base
 
   # Nested Models
   accepts_nested_attributes_for :images, :reject_if => :all_blank, :allow_destroy => true
+  
 end

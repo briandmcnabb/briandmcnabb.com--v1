@@ -1,11 +1,14 @@
 %article[client]
 	%header
-		= image_tag "http://placehold.it/269x269", alt: "#{client.organization}"
-		%h1= client.organization
+		= image_tag client.client_logo.asset_path_url, alt: "#{client.organization} logo" if client.client_logo
+		- client.services.each do |service|
+			%h3= service.name
 		= link_to 'more...', '#', :class => 'expand'
 	%section.content
 		.content-wrapper
 			%h1= client.organization
-			=link_to 'close', '#', :class => 'collapse'
+			%p= "website: #{client.url}"
 			.text-wrapper
-				%p= client.description
+				-#%p= client.description
+				= render partial: 'projects/project', collection: client.projects
+			=link_to 'close', '#', :class => 'collapse'

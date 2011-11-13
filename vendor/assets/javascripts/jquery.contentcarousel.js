@@ -192,8 +192,8 @@
 						});
 						
 						// click to open the item(s)
-						$el.find('a.expand').live('click.contentcarousel', function( event ) {
-							if( cache.isAnimating ) return false;
+						$el.find('a.expand').live('click.contentcarousel', function(event) {
+							if(cache.isAnimating) return false;
 							cache.isAnimating	= true;
 							$(this).hide();
 							var $item	= $(this).closest('article');
@@ -202,43 +202,58 @@
 						});
 						
 						// click to close the item(s)
-						$el.find('a.collapse').live('click.contentcarousel', function( event ) {
-							if( cache.isAnimating ) return false;
+						$el.find('a.collapse').live('click.contentcarousel', function(event) {
+							if(cache.isAnimating) return false;
 							cache.isAnimating	= true;
 							var $item	= $(this).closest('article');
 							aux.closeItems( $wrapper, $item, settings, cache );
 							return false;
 						});
 						
+						// esc to close the item(s)
+						$('body').keyup(function(event){
+							if(event.keyCode == 27 && cache.expanded){
+								if(cache.isAnimating) return false;
+								cache.isAnimating	= true;
+								var $item	= $('article[style*="left: 0px;"]');
+								aux.closeItems( $wrapper, $item, settings, cache );
+								return false;
+							}
+						});
+						
 						// navigate left
-						$navPrev.bind('click.contentcarousel', function( event ) {
-							if( cache.isAnimating ) return false;
+						$navPrev.bind('click.contentcarousel', function(event) {
+							if(cache.isAnimating) return false;
 							cache.isAnimating	= true;
 							aux.navigate( -1, $el, $wrapper, settings, cache );
 						});
 						
 						// navigate right
-						$navNext.bind('click.contentcarousel', function( event ) {
-							if( cache.isAnimating ) return false;
+						$navNext.bind('click.contentcarousel', function(event) {
+							if(cache.isAnimating) return false;
 							cache.isAnimating	= true;
 							aux.navigate( 1, $el, $wrapper, settings, cache );
 						});
 						
-						// adds events to the mouse
-						$el.bind('mousewheel.contentcarousel', function(e, delta) {
-							if(delta > 0) {
-								if( cache.isAnimating ) return false;
+						
+						// key navigate left
+						$('body').keyup(function(event){
+							if(event.keyCode == 37){
+								if(cache.isAnimating) return false;
 								cache.isAnimating	= true;
 								aux.navigate( -1, $el, $wrapper, settings, cache );
-							}	
-							else {
-								if( cache.isAnimating ) return false;
-								cache.isAnimating	= true;
-								aux.navigate( 1, $el, $wrapper, settings, cache );
-							}	
-							return false;
+							}
 						});
 						
+						// key navigate right
+						$('body').keyup(function(event){
+							
+							if(event.keyCode == 39){
+								if(cache.isAnimating) return false;
+								cache.isAnimating	= true;
+								aux.navigate( 1, $el, $wrapper, settings, cache );
+							}
+						});
 					});
 				}
 			}

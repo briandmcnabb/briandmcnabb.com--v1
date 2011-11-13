@@ -8,20 +8,9 @@
 			= f.input :email
 			= f.input :url
 			= f.input :description
+			= f.input :service_tokens, label: 'Services'#, input_html:{ data:{ autosuggest: Service.select('id, name') } }
 		%fieldset#right_column
 			%legend Logo
 			= f.simple_fields_for :client_logo
 			= f.link_to_add( "add logo", :client_logo) unless resource.client_logo
-		%fieldset#left_column
-			%legend= "Project#{'s' if resource.projects.count > 1}"
-			= f.simple_fields_for :projects
-			= f.link_to_add( "add a project", :projects)
 	= f.button :submit, "submit"
-	
-	
-	
-
-
-
-
-

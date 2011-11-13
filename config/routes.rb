@@ -9,7 +9,6 @@ Briandmcnabb::Application.routes.draw do
       resources :clients do
         resources :projects
       end
-      resources :projects
       resources :inquiries
       resources :posts
       resource :user
@@ -18,12 +17,12 @@ Briandmcnabb::Application.routes.draw do
   end
 
   devise_for :user#, :skip => :registrations
-  resource  :user, :only => :show
-  resources :clients, :only => [:index, :show]
-  resources :posts, :only => [:index, :show]
-  resources :services, :only => [:index, :show]
+  resource  :user, only: :show
+  resources :clients, only: :index
+  resources :posts, only: [:index, :show]
+  resources :services, only: [:index, :show]
 
   # Dynamic Root Route
-  root :to => "users#show"
+  root to: "users#show"
   
 end

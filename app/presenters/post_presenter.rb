@@ -9,7 +9,9 @@ class PostPresenter < BasePresenter
   end
 
   def publish_date
-    time_tag(post.publish_date, post.publish_date.strftime('%b.%d.%Y'), pubdate: true)
+    handle_none post.publish_date do
+      time_tag(post.publish_date, post.publish_date.strftime('%b.%d.%Y'), pubdate: true)
+    end  
   end
 
 end
