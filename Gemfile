@@ -20,6 +20,7 @@ gem 'devise'
 
 gem 'rmagick'
 gem 'carrierwave'
+gem 'fog'
 
 gem 'redcarpet', git: 'git://github.com/tanoku/redcarpet.git'
 gem "coderay", "~> 1.0.1"
