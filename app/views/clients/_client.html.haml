@@ -8,7 +8,9 @@
 		.content-wrapper
 			%h1= client.organization
 			%p= "website: #{client.url}"
-			.text-wrapper
-				-#%p= client.description
-				= render partial: 'projects/project', collection: client.projects
+			-#%p= client.description
+			#gallery	
+				- client.images.each do	|image|
+					= link_to image_tag(image.asset_path_url(:preview)), image.asset_path_url
+			-#= render partial: 'projects/project', collection: client.projects
 			=link_to 'close', '#', :class => 'collapse'

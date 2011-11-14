@@ -1,5 +1,5 @@
 - present post do |present_post|	
-	%article.clearfix[post]
+	%article.clearfix[post]{odd_or_even}
 		.column_right
 			%header
 				%h1= link_to post.title, post_path(post)
