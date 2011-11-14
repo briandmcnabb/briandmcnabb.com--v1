@@ -8,6 +8,8 @@
 //= require jquery-ui
 //= require jquery_ujs
 //= require jquery.autoSuggest
+//= require jquery.contentcarousel
+//= require jquery.touch-gallery-1.0.0
 //= require nested_form
 //= require base_scripts
 //= require_tree .

@@ -4,6 +4,7 @@ gem 'rails', '3.1.1'
 gem 'thin'
 
 gem 'haml'
+gem 'coffee-filter'
 gem 'jquery-rails'
 
 gem 'inherited_resources'

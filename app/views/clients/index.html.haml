@@ -1,13 +1,10 @@
 - title "Portfolio"
 
 - content_for :javascript do
-	= javascript_include_tag 'jquery.touch-gallery-1.0.0'
-	= javascript_include_tag 'jquery.contentcarousel'
-	:javascript
-		$(document).ready(function(){
-			$('#clients').contentcarousel();
-			$('#gallery a').touchGallery();
-		});
+	:coffeescript
+		$(document).ready ->
+		  $("#clients").contentcarousel()
+		  $("#gallery a").touchGallery()
 		
 		
 %section#clients
