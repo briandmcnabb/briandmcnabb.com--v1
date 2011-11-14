@@ -6,5 +6,5 @@ CarrierWave.configure do |config|
   }
   config.fog_directory = ENV['RACKSPACE_DIRECTORY']
   config.fog_host = ENV['RACKSPACE_CDN_HOST']
-  config.storage = ENV['CARRIERWAVE_STORAGE']
+  config.storage = ENV['CARRIERWAVE_STORAGE'].to_sym
 end
