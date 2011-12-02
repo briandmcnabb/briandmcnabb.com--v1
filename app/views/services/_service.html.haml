@@ -1,11 +1,11 @@
-%section.clearfix[service]
-	%figure
-		= image_tag "#{service.service_symbol.asset_path_url ? service.service_symbol.asset_path_url : 'http://placehold.it/200x200'}", alt: "#{service.name.downcase}"
-	%header
-		%h1= service.name
-	.column_1
-		%p= service.description
-	.column_2
-		%ul
-			- service.skills.each do |skill|
-				%li= skill.name
+- present service do |present_service|
+
+	%section.clearfix[service]
+		%figure
+			= present_service.logo
+		%header
+			= present_service.name
+		.column_1
+			= present_service.description
+		.column_2
+			%ul= render partial: 'skills/skill', collection: service.skills

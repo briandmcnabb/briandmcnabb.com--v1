@@ -1,0 +1,4 @@
+class AssetPresenter < BasePresenter
+
+  
+end

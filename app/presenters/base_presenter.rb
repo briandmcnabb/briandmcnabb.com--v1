@@ -29,11 +29,11 @@ class BasePresenter
     @template.send(*args, &block)
   end
   
-  def handle_none(value)
+  def handle_none(value, *placeholder)
     if value.present?
       yield
     else
-      content_tag :span, "Unspecified", class: "none"
+      placeholder.present? ? placeholder.first : content_tag(:span, "Unspecified", class: "none")
     end
   end
   
