@@ -1,11 +1,21 @@
 class PostPresenter < BasePresenter
-  
-  def body
-    render_markdown post.body
+
+  def title
+    handle_none post.title do
+      current_page?(posts_path) ? link_to(post.title, post_path(post)) : post.title
+    end
   end
   
-  def abbr_body(length=150)
-    snippet(post.body, length)
+  def sub_title
+    handle_none post.sub_title, nil do
+      post.sub_title
+    end
+  end
+
+  def body
+    handle_none post.body do
+      current_page?(posts_path)	? snippet(post.body, 150) : post.body
+    end
   end
 
   def publish_date

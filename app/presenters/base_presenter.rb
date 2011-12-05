@@ -54,4 +54,8 @@ class BasePresenter
     '... ' + link_to(('continue reading &rarr;').html_safe, post_path(post))
   end
   
+  def placeholder_image(size)
+    image_tag "http://placehold.it/#{size}"
+  end
+  
 end

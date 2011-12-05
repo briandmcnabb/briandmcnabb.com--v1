@@ -1,8 +1,0 @@
-%section[project]
-	%h2= project.title
-	-#%p= project.description
-	
-	#gallery
-		- project.images.each do |image|
-			= link_to image_tag(image.asset_path_url(:preview)), image.asset_path_url, class: "pirobox_#{project.id}"
-		

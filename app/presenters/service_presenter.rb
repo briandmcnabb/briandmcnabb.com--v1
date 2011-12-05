@@ -1,8 +1,8 @@
 class ServicePresenter < BasePresenter
   
-  def logo
+  def symbol
     handle_none(service.service_symbol, placeholder_image('200x200')) do
-      image_tag service.service_symbol.asset_path_url, alt: "#{service.name.downcase}"
+      image_tag service.service_symbol.asset_path_url
     end
   end
   
@@ -17,13 +17,5 @@ class ServicePresenter < BasePresenter
       content_tag(:p, service.description)
     end
   end
-  
-  
-  
-  private
-  
-  def placeholder_image(size)
-    image_tag("http://placehold.it/#{size}", alt: "#{service.name.downcase}")
-  end
-  
+    
 end

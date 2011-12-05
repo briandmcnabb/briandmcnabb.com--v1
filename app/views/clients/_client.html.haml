@@ -1,16 +1,16 @@
-%article[client]
-	%header
-		= image_tag client.client_logo.asset_path_url, alt: "#{client.organization} logo" if client.client_logo
-		- client.services.each do |service|
-			%h3= service.name
-		= link_to 'more...', '#', :class => 'expand'
-	%section.content
-		.content-wrapper
-			%h1= client.organization
-			%p= "website: #{client.url}"
-			-#%p= client.description
-			#gallery	
-				- client.images.each do	|image|
-					= link_to image_tag(image.asset_path_url(:preview)), image.asset_path_url
-			-#= render partial: 'projects/project', collection: client.projects
-			=link_to 'close', '#', :class => 'collapse'
+- present client do |present_client|
+	%article[client]
+		%header
+			= present_client.logo
+			- client.services.each do |service|
+				%h3= service.name
+			= link_to 'more...', '#', :class => 'expand'
+		%section.content
+			.content-wrapper
+				= present_client.organization
+				= present_client.website
+				= present_client.description
+				#gallery	
+					- client.images.each do	|image|
+						= link_to image_tag(image.asset_path_url(:preview)), image.asset_path_url
+				=link_to 'close', '#', :class => 'collapse'

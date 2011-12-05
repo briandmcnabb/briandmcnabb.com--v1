@@ -2,9 +2,9 @@
 	%article.clearfix[post]{odd_or_even}
 		.column_right
 			%header
-				%h1= link_to post.title, post_path(post)
-				%h2= post.sub_title
-			%p= current_page?(posts_path)	? present_post.abbr_body : present_post.body
+				%h1= present_post.title
+				%h2= present_post.sub_title
+			%p= present_post.body
 		%footer
 			= present_post.publish_date
 			- unless current_page?(posts_path)
