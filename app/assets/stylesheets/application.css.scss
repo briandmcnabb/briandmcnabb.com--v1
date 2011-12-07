@@ -60,12 +60,16 @@ body {
 }
 
 #logout {
+	position: relative;
 	width: 960px;
 	margin: 0 auto;
-	position: relative;
 	a {
+		top: -50px;
+		right: 0px;
 		position: absolute;
-		
+		background-color: hsla(0, 0%, 13%, 1);
+		padding: 3px 10px 5px;
+		font-weight:bold;
 	}
 }
 

@@ -1,10 +1,10 @@
-section.user { padding: 0 15px;
+section.user { padding-left: 15px;
 	p { 
 		float: left;
 		width: 33em;
 		margin: 0;
 		font-size: 1.50em;
-		font-family: 'quicksand', sans-serif; 
+		font-family: 'Quicksand', sans-serif; 
 	}
 	footer { 
 		float: right;
@@ -20,8 +20,25 @@ section.user { padding: 0 15px;
 		img {
 			border: 1px solid hsla(0, 0%, 73%, 0.05);
 		}
+		a.resume {
+			display: inline-block;
+			width: 210px;
+			margin: 15px 7px 0;
+			background: #D14B3A;
+			padding: 5px 0 1px;
+			color: #222;
+			text-align: center;
+			font-family: 'airplane', sans-serif;
+			font-size: 2.308em;
+			line-height: 1.5em;
+		}
+		a.resume:hover {
+			width: 208px;
+			padding: 4px 0 0;
+			border: 1px solid #B0281A;
+		}
 		#social_buttons {
-			margin: 10px 0;
+			margin: 15px 0;
 			padding: 0 6px;
 		}
 	}
@@ -34,4 +51,3 @@ section.user { padding: 0 15px;
 		}
 	}
 }
-

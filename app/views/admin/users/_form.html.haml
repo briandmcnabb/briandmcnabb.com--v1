@@ -8,5 +8,9 @@
 		%fieldset#right_column
 			%legend Avatar
 			= f.simple_fields_for :avatar
-			= f.link_to_add( "add an avatar", :avatar) unless resource.avatar
+			= f.link_to_add( "upload an avatar", :avatar) unless resource.avatar
+		%fieldset#right_column
+			%legend Resume
+			= f.simple_fields_for :resume
+			= f.link_to_add( "uplaod a resume", :resume) unless resource.resume
 	= f.button :submit, "submit"
