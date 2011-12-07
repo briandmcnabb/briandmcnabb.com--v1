@@ -35,7 +35,7 @@ module SocialButtonsHelper
     link_to 'Tweet', 'https://twitter.com/share', :class => "twitter-share-button", data: { url: url, via: via, text: text }
   end
 
-  def twitter_feed
+  def twitter_feed(username='briandmcnabb')
 		content_for :head do
       javascript_include_tag 'http://widgets.twimg.com/j/2/widget.js'
     end
@@ -64,7 +64,7 @@ module SocialButtonsHelper
 			    live: true,
 			    behavior: 'all'
 			  }
-			}).render().setUser('briandmcnabb').start();"
+			}).render().setUser('#{username}').start();"
 	  end
   end
   

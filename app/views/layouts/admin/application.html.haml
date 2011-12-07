@@ -1,7 +1,6 @@
 - content_for :content do
-	#logout
-		= link_to "logout", destroy_user_session_url(subdomain: false), method: :delete
 	#container
+		= link_to "logout", destroy_user_session_url(subdomain: false), method: :delete, id: 'logout_link'
 		%section#masthead.clearfix
 			%header.clearfix
 				%h1= resource_class

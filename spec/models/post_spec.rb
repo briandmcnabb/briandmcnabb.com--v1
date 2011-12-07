@@ -11,7 +11,7 @@ end
 #  title        :string(255)
 #  sub_title    :string(255)
 #  body         :text
-#  publish_date :datetime
+#  publish_date :date
 #  user_id      :integer
 #  created_at   :datetime
 #  updated_at   :datetime
