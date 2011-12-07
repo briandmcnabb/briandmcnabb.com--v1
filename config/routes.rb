@@ -2,7 +2,7 @@ Briandmcnabb::Application.routes.draw do
 
   # Backend Administrative Interface
   constraints :subdomain => "admin" do
-    scope :module => "admin", :as => "admin" do
+    scope :module => "admin" do
       resources :services do
         resources :skills
       end
