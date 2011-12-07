@@ -17,7 +17,11 @@ class UserPresenter < BasePresenter
       user.description
     end
   end
-
   
+  def avatar
+    handle_none(user.avatar, placeholder_image('200x600')) do
+      image_tag user.avatar.asset_path_url
+    end
+  end
   
 end

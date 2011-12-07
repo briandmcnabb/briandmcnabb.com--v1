@@ -1,4 +1,37 @@
-section.user {
-	p { float: left; width: 60%; margin: 0 20px 15px 15px; font-size: 1.750em; font-family: 'quicksand', sans-serif; }
-	footer { float: right; margin: 0 15px 15px 0; }
+section.user { padding: 0 15px;
+	p { 
+		float: left;
+		width: 33em;
+		margin: 0;
+		font-size: 1.50em;
+		font-family: 'quicksand', sans-serif; 
+	}
+	footer { 
+		float: right;
+		margin: 0;
+		background: hsla(0, 100%, 100%, 0.6) url(/assets/bg_pattern_2.png) repeat;
+		padding: 20px;
+		border: 1px solid hsla(0, 0%, 0%, 0.035);
+		figure { 
+			padding: 10px;
+			background-color: hsla(32, 88%, 97%, 1);
+			border: 1px solid hsla(0, 0%, 89%, 0.8);
+		}
+		img {
+			border: 1px solid hsla(0, 0%, 73%, 0.05);
+		}
+		#social_buttons {
+			margin: 10px 0;
+			padding: 0 6px;
+		}
+	}
+	.twtr-widget {
+		.twtr-hd {
+			display: none;
+		}
+		p {
+			font-size: 1em;
+		}
+	}
 }
+

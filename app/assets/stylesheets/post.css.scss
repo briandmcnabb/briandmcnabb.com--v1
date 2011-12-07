@@ -1,15 +1,14 @@
-#posts { margin: -45px 0 45px; background: hsla(0, 0%, 0%, 0.05); 
-	.even { background: hsla(0, 0%, 100%, 0.25); }
-}
-
-article.post { padding: 50px 0 20px; border-bottom: 1px solid hsla(0, 0%, 100%, 0.25);
+article.post { 
+	margin-bottom: 45px; 
+	padding-bottom: 15px; 
+	border-bottom: 1px dotted hsla(0, 0%, 0%, 0.25);
 	.column_right { float: left; width: 80%; margin-left: 20%;}
-	header { padding: 10px 0; }
-	h1 { margin: 0px; font-size: 2.0em; font-family: 'polaris'; }
-	h2 { margin: 0px; font-size: 1.1em; font-family: 'quicksand'; }
-	p { width: 85%; margin: 0; }	
+	header { padding-bottom: 10px; }
+	h1 { margin: 0px; font-size: 2em; font-family: 'polaris'; }
+	h2 { margin: 0px; font-size: 1.25em; font-family: 'Quicksand'; }
+	p { width: 37.5em; margin: 0; font-size: 1.5em; font-family: 'Linden Hill'; }	
 	footer { float:left; width: 20%; margin-left: -100%; padding-left: 10px;
-		time { display: block; margin-top: 12px; font-size: 1.5em; font-family: 'polaris'; }
+		time { display: block; margin-top: 3px; font-size: 1.5em; font-family: 'polaris'; }
 	}
 }
 

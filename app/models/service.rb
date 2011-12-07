@@ -11,7 +11,7 @@
 
 class Service < ActiveRecord::Base
   # Accessors
-  attr_accessible :name, :description, :service_symbol_attributes, :skill_attributes
+  attr_accessible :name, :description, :service_symbol_attributes, :skills_attributes
 
   # Associations
   has_one  :service_symbol, :as => :attachable, :dependent => :destroy

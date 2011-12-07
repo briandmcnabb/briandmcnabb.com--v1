@@ -14,7 +14,7 @@ class PostPresenter < BasePresenter
 
   def body
     handle_none post.body do
-      current_page?(posts_path)	? snippet(post.body, 150) : post.body
+      current_page?(posts_path)	? snippet(post.body, 80) : post.body
     end
   end
 

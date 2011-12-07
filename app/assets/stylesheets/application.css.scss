@@ -18,6 +18,8 @@
   Fonts
 ---------------------------------*/
 
+@import url(http://fonts.googleapis.com/css?family=Quicksand|Linden+Hill);
+
 @font-face {
 	font-family: 'airplane';
 	src: font-url('airplane-webfont.eot');
@@ -48,16 +50,6 @@
 	font-style: normal;
 }
 
-@font-face {
-	font-family: 'quicksand';
-	src: font-url('quicksand_book-webfont.eot');
-	src: local('☺'), font-url('quicksand_book-webfont.woff') format('woff'), 
-					 font-url('quicksand_book-webfont.ttf') format('truetype'),
-					 font-url('quicksand_book-webfont.svg#webfontOfIwU6Fp') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
-
 
 /*----------------------------------
   Layout Styles
@@ -65,6 +57,16 @@
 
 body {
 	background-color: #ecf0d7;
+}
+
+#logout {
+	width: 960px;
+	margin: 0 auto;
+	position: relative;
+	a {
+		position: absolute;
+		
+	}
 }
 
 #container { width: 960px; margin: 50px auto 25px; }

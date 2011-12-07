@@ -1,12 +1,4 @@
 module SocialButtonsHelper
-
-  def share_on_twitter(url, via, text )
-		content_for :javascript do
-		  javascript_include_tag '//platform.twitter.com/widgets.js'
-		end
-    link_to 'Tweet', 'https://twitter.com/share', :class => "twitter-share-button", data: { url: url, via: via, text: text }
-  end
-
   def like_on_facebook(url)
 		content_for :javascript do
 		  content_tag(:div, '', id: 'fb-root')
@@ -34,6 +26,46 @@ module SocialButtonsHelper
 		  end
 		end
     content_tag(:div, '', class: 'g-plusone', data: { href: url, size: 'tall', annotation: 'none' } )
+  end
+    
+  def share_on_twitter(url, via, text )
+		content_for :javascript do
+		  javascript_include_tag '//platform.twitter.com/widgets.js'
+		end
+    link_to 'Tweet', 'https://twitter.com/share', :class => "twitter-share-button", data: { url: url, via: via, text: text }
+  end
+
+  def twitter_feed
+		content_for :head do
+      javascript_include_tag 'http://widgets.twimg.com/j/2/widget.js'
+    end
+    javascript_tag do
+	    "new TWTR.Widget({
+			  version: 2,
+			  type: 'profile',
+			  rpp: 5,
+			  interval: 30000,
+			  width: 224,
+			  height: 300,
+			  theme: {
+			    shell: {
+			      background: '#ecf0d7',
+			      color: '#ecf0d7'
+			    },
+			    tweets: {
+			      background: '#ecf0d7',
+			      color: '#222222',
+			      links: '#d14c3a'
+			    }
+			  },
+			  features: {
+			    scrollbar: true,
+			    loop: false,
+			    live: true,
+			    behavior: 'all'
+			  }
+			}).render().setUser('briandmcnabb').start();"
+	  end
   end
   
 end

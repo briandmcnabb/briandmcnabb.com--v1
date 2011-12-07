@@ -1,10 +1,19 @@
 - title "About"
 
-%section.clearfix[resource]
-	%p
-		= resource.description
-	%footer
-		= image_tag resource.avatar.asset_path_url if resource.avatar
-		
-		
-		
+- present resource do |present_user|
+	%section.clearfix[resource]
+		%p
+			= present_user.description
+		%footer
+			%figure
+				= present_user.avatar
+			#social_buttons
+				= link_to "http://twitter.com/briandmcnabb", target: '_blank' do
+					= image_tag 'twitter.png', size: '48x48'
+				= link_to "http://github.com/briandmcnabb", target: '_blank' do
+					= image_tag 'github.png', size: '48x48'	
+				= link_to "http://dribbble.com/briandmcnabb", target: '_blank' do
+					= image_tag 'dribbble.png', size: '48x48'	
+				= link_to "http://www.linkedin.com/in/briandmcnabb", target: '_blank' do
+					= image_tag 'linkedin.png', size: '48x48'
+			= twitter_feed
