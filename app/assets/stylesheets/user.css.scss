@@ -1,10 +1,9 @@
 section.user { padding-left: 15px;
 	p { 
 		float: left;
-		width: 33em;
+		width: 32em;
 		margin: 0;
-		font-size: 1.50em;
-		font-family: 'Quicksand', sans-serif; 
+		font: normal 160%/1.55 'Vollkorn', serif;
 	}
 	footer { 
 		float: right;
@@ -22,20 +21,24 @@ section.user { padding-left: 15px;
 		}
 		a.resume {
 			display: inline-block;
-			width: 210px;
+			width: 208px;
 			margin: 15px 7px 0;
-			background: #D14B3A;
-			padding: 5px 0 1px;
+			background: hsl(7, 62%, 52%);
+			padding-top: 5px;
+			border: 1px solid transparent;
 			color: #222;
 			text-align: center;
 			font-family: 'airplane', sans-serif;
-			font-size: 2.308em;
+			font-size: 230%;
 			line-height: 1.5em;
 		}
 		a.resume:hover {
-			width: 208px;
-			padding: 4px 0 0;
-			border: 1px solid #B0281A;
+			border: 1px solid hsl(7, 62%, 45%);
+			background-image: -webkit-linear-gradient(top, transparent, hsla(0, 0%, 0%, 0.05));
+			background-image:    -moz-linear-gradient(top, transparent, hsla(0, 0%, 0%, 0.05));
+			background-image:      -o-linear-gradient(top, transparent, hsla(0, 0%, 0%, 0.05));
+			background-image:     -ms-linear-gradient(top, transparent, hsla(0, 0%, 0%, 0.05));
+			background-image:         linear-gradient(top, transparent, hsla(0, 0%, 0%, 0.05));
 		}
 		#social_buttons {
 			margin: 15px 0;

@@ -1,7 +1,7 @@
 /*----------------------------------
   Flash Messages
 ---------------------------------*/
-#flash_notice, #flash_error, #flash_alert { font-size: 1.5em; text-align: center;} 
+#flash_notice, #flash_error, #flash_alert { font-size: 150%; text-align: center;} 
 #flash_notice { background-color: #CFC; border-bottom: 5px solid #6C6; }
 #flash_error, #flash_alert { background-color: #FCC; border-bottom: 5px solid #C66; }
 
@@ -97,14 +97,14 @@ input[type="file"] {
 	border: none;
 	color: #222;
 	font-family: 'quicksand';
-	font-size: 1.1em;
+	font-size: 110%;
 	-webkit-appearance: none;	
 }
 
 select {
 	width: 300px;
 	margin: 3px 0px;
-	font-size: 24px;
+	font-size: 184.6%;
 }
 
 .simple_form div.input {
@@ -145,13 +145,13 @@ label.collection_radio {
   color:   black;
   display: block;
   margin-left: 120px;
-  font-size:    12px;
+  font-size:    92.3%;
 }
 
 .simple_form .hint {
   clear: left;
   margin-left: 120px;
-  font-size:    12px;
+  font-size:    92.3%;
   color: #555;
   display: block;
   font-style: italic;
@@ -181,7 +181,7 @@ a.add_nested_fields {
 
 fieldset { margin-bottom: 50px; padding-top: 20px; border-top: 1px solid #fff; width: 465px; }
 fieldset#left_column { float: left; margin-right: 30px; }
-legend { margin-left: 10px; padding: 9px 10px; border: 1px solid hsla(0, 0%, 0%, 0.03); background: hsla(0, 0%, 100%, 0.6) image-url('bg_pattern_2.png') repeat; font-size: 1.25em; font-weight: bold; }
+legend { margin-left: 10px; padding: 9px 10px; border: 1px solid hsla(0, 0%, 0%, 0.03); background: hsla(0, 0%, 100%, 0.6) image-url('bg_pattern_2.png') repeat; font-size: 125%; font-weight: bold; }
 
 .fields { position: relative; margin-bottom: 10px; background: hsla(0, 0%, 0%, 0.05) image-url('bg_pattern_2.png') repeat; padding: 10px 0; border: 1px solid hsla(0, 0%, 0%, 0.005); 
 	.fields { background: none; }
@@ -193,5 +193,5 @@ legend { margin-left: 10px; padding: 9px 10px; border: 1px solid hsla(0, 0%, 0%,
 	img { 	float: left; margin: -4px 20px -4px 5px; } 
 }
 
-a.add_nested_fields { display: inline-block; width: 312px; margin-left: 110px; background: #d14b3a; padding-top: 5px; color: #222; text-align: center; font-family: 'airplane', sans-serif; font-size: 2.308em; line-height: 1.5em; }
+a.add_nested_fields { display: inline-block; width: 312px; margin-left: 110px; background: #d14b3a; padding-top: 5px; color: #222; text-align: center; font-family: 'airplane', sans-serif; font-size: 230.8%; line-height: 1.5em; }
 

@@ -4,11 +4,11 @@ article.post {
 	border-bottom: 1px dotted hsla(0, 0%, 0%, 0.25);
 	.column_right { float: left; width: 80%; margin-left: 20%;}
 	header { padding-bottom: 10px; }
-	h1 { margin: 0px; font-size: 2em; font-family: 'polaris'; }
-	h2 { margin: 0px; font-size: 1.25em; font-family: 'Quicksand'; }
-	p { width: 37.5em; margin: 0; font-size: 1.5em; font-family: 'Linden Hill'; }	
-	footer { float:left; width: 20%; margin-left: -100%; padding-left: 10px;
-		time { display: block; margin-top: 3px; font-size: 1.5em; font-family: 'polaris'; }
+	h1 { margin: 0px; font-size: 200%; font-family: 'polaris'; }
+	h2 { margin: 0px; font-size: 125%; font-family: 'Quicksand'; }
+	p { width: 36em; margin: 0; font: normal 160%/1.55 'Vollkorn', serif; }	
+	footer { float:left; width: 20%; margin: 6px 0 0 -100%; padding-left: 10px;
+		time { display: block; font-size: 150%; font-family: 'polaris'; }
 	}
 }
 
@@ -25,3 +25,8 @@ article.post:last-of-type { padding-bottom: 0; border-bottom: none; }
 	#twitter:hover, #google:hover, #facebook:hover { opacity: 1; }	
 	#google { margin-top: 5px; }	
 }
+
+
+/*p {
+	margin: 0 0 2.3em;
+}*/
