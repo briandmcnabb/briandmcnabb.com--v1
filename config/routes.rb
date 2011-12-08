@@ -4,13 +4,17 @@ Briandmcnabb::Application.routes.draw do
   constraints subdomain: "admin" do
     scope module: "admin", as: "admin"  do
       resources :services do
+        collection { post :sort }
         resources :skills
       end
       resources :clients do
+        collection { post :sort }
         resources :projects
       end
       resources :inquiries
-      resources :posts
+      resources :posts do
+        collection { post :sort }
+      end
       resource :user
       root to: "posts#index"
     end

@@ -52,6 +52,17 @@ table.backend	{ background: hsla(0, 0%, 0%, 0.05); border-collapse: collapse; wi
 	.show 	 { background-image: image_url('show_icon.png'); }
 	.edit 	 { background-image: image_url('edit_icon.png'); }
 	.destroy { background-image: image_url('destroy_icon.png'); }
+	.handle {
+		background-image: image_url('handle_icon.png');
+	  cursor: grab;
+	  cursor: -moz-grab;
+	  cursor: -webkit-grab;
+	}
+	.handle:active {
+		cursor: grabbing;
+		cursor: -moz-grabbing;
+		cursor: -webkit-grabbing;
+	}
 	tr.even { background: hsla(0, 0%, 100%, 0.25); }
 }
 

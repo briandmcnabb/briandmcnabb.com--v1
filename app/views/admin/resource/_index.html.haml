@@ -9,7 +9,8 @@
 				%th &nbsp;
 				%th &nbsp;
 				%th &nbsp;
-		%tbody
+				= content_tag(:th, ('&nbsp;').html_safe) if attributes.include?('title')
+		%tbody#sortable{ :data => {:sort_url => "#{send('sort_admin_'+collection.first.class.to_s.downcase+'s_url')}"} }
 			- collection.each do |resource|
 				%tr[resource]{odd_or_even}
 					- attributes.each do |attr|
@@ -20,5 +21,8 @@
 						= link_to 'edit', edit_resource_path(resource), :class => 'edit ir'
 					%td.icon_link
 						= link_to 'destroy', resource_path(resource), :method => :delete, confirm: "Are you sure?", :class => 'destroy ir'
-		
+					- if attributes.include?('title')
+						%td.icon_link
+							.handle.ir= "[drag]"
+
 	= will_paginate collection
