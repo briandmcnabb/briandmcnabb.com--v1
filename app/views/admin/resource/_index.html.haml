@@ -10,7 +10,7 @@
 				%th &nbsp;
 				%th &nbsp;
 				= content_tag(:th, ('&nbsp;').html_safe) if attributes.include?('title')
-		%tbody#sortable{ :data => {:sort_url => "#{send('sort_admin_'+collection.first.class.to_s.downcase+'s_url')}"} }
+		%tbody#sortable{ :data => {:sort_url => "#{send('sort_admin_'+collection.first.class.to_s.downcase+'s_url') if collection}"} }
 			- collection.each do |resource|
 				%tr[resource]{odd_or_even}
 					- attributes.each do |attr|

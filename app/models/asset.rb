@@ -20,9 +20,6 @@ class Asset < ActiveRecord::Base
   # Associations
   belongs_to :attachable, polymorphic: true
   
-  # Validations
-  #validates :image, presence: true
-  
   # Callbacks
   before_save :update_asset_attributes
 
@@ -30,6 +27,7 @@ class Asset < ActiveRecord::Base
   
   private
   
+  # Save content type and file size to db
   def update_asset_attributes
     if asset_path.present? && asset_path_changed?
       self.content_type = asset_path.file.content_type

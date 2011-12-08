@@ -24,9 +24,9 @@ class Client < ActiveRecord::Base
 
 
   # Associations
-  has_one :client_logo, as: :attachable, dependent: :destroy
-  has_many :projects, dependent: :destroy
-  has_many :images, through: :projects
+  has_one :client_logo, :as => :attachable, :dependent => :destroy
+  has_many :projects, :dependent => :destroy
+  has_many :images, :through => :projects
   has_and_belongs_to_many :services
 
 

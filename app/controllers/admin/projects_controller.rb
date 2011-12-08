@@ -3,7 +3,7 @@ class Admin::ProjectsController < Admin::ResourceController
   belongs_to :client
 
   def sort
-    params[:faq].each_with_index do |id, index|
+    params[:project].each_with_index do |id, index|
       Project.update_all({position: index+1}, {id: id})
     end
     render nothing: true
