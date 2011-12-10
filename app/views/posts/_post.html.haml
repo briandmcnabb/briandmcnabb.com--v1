@@ -4,13 +4,14 @@
 			%header
 				%h1= present_post.title
 				%h2= present_post.sub_title
-			%p= present_post.body
+			= present_post.body
+			= disqus(post) unless current_page?(posts_path)
 		%footer
 			= present_post.publish_date
-			- unless current_page?(posts_path)
+			- if current_page?(posts_path)
+				= present_post.comment_count
+			- else
 				#social_buttons
 					#twitter= share_on_twitter post_url(post), "briandmcnabb", "#{post.title}: #{post.sub_title}"
 					#google= google_plus_one post_url(post)
-					#facebook= like_on_facebook post_url(post)
-
-				
+					#facebook= like_on_facebook post_url(post)	

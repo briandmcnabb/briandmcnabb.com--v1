@@ -45,4 +45,8 @@ class User < ActiveRecord::Base
   def to_s
     self.first_name || self.last_name ? "#{self.first_name} #{self.last_name}" : self.email
   end
+  
+  def full_name
+    [first_name, last_name].join(' ')
+  end
 end

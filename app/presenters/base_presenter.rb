@@ -51,7 +51,7 @@ class BasePresenter
   end
   
   def ellipsis_link
-    '... ' + link_to(('continue reading &rarr;').html_safe, post_path(post))
+    '... ' + link_to(('continue reading &#8250;&#8250;').html_safe, post_path(post))
   end
   
   def placeholder_image(size)

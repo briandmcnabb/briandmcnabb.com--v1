@@ -6,9 +6,10 @@ article.post {
 	header { padding-bottom: 10px; }
 	h1 { margin: 0px; font-size: 200%; font-family: 'polaris'; }
 	h2 { margin: 0px; font-size: 125%; font-family: 'Quicksand'; }
-	p { width: 36em; margin: 0; font: normal 160%/1.55 'Vollkorn', serif; }	
+	p { width: 36em; margin: 0 0 1.6em; font: normal 160%/1.55 'Vollkorn', serif; }	
 	footer { float:left; width: 20%; margin: 6px 0 0 -100%; padding-left: 10px;
 		time { display: block; font-size: 150%; font-family: 'polaris'; }
+		.comment_count { font-size: 1.1em; line-height: 1.5; font-family: 'Quicksand'; }
 	}
 }
 
@@ -25,8 +26,3 @@ article.post:last-of-type { padding-bottom: 0; border-bottom: none; }
 	#twitter:hover, #google:hover, #facebook:hover { opacity: 1; }	
 	#google { margin-top: 5px; }	
 }
-
-
-/*p {
-	margin: 0 0 2.3em;
-}*/

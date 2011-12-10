@@ -1,4 +1,7 @@
 - title "Blog"
 
 %section#posts.clearfix
+	= auto_discovery_link_tag(:atom)
 	= render collection
+
+= enable_comment_count
