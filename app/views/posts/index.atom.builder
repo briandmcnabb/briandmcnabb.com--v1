@@ -1,8 +1,12 @@
 atom_feed do |feed|
   feed.title("briandmcnabb")
   blog = collection.first
-  present blog do |present_blog|
-    feed.updated(present_blog.updated_at)
+  if blog
+    present blog do |present_blog|
+      feed.updated(present_blog.updated_at)
+    end
+  else
+    feed.updated()
   end
 
   collection.each do |post|
