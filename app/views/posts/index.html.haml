@@ -1,7 +1,8 @@
 - title "Blog"
+- content_for :head do
+	= auto_discovery_link_tag(:atom, posts_url(:atom))
 
 %section#posts.clearfix
-	= auto_discovery_link_tag(:atom)
 	= render collection
 
 = enable_comment_count
