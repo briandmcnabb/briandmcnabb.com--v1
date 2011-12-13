@@ -8,7 +8,11 @@ class Admin::PostsController < Admin::ResourceController
   end
 
   protected
-    def begin_of_association_chain 
-      current_user 
-    end
+  def begin_of_association_chain 
+    current_user 
+  end
+  
+  def collection
+    @posts ||= end_of_association_chain.order("position")
+  end
 end

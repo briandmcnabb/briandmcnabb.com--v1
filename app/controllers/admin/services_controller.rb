@@ -5,4 +5,9 @@ class Admin::ServicesController < Admin::ResourceController
     end
     render nothing: true
   end
+  
+  protected
+  def collection
+    @services ||= end_of_association_chain.order("position")
+  end
 end

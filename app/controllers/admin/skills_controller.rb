@@ -7,4 +7,9 @@ class Admin::SkillsController < Admin::ResourceController
     end
     render nothing: true
   end
+  
+  protected
+  def collection
+    @skills ||= end_of_association_chain.order("position")
+  end
 end

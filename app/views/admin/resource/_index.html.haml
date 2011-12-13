@@ -9,7 +9,7 @@
 				%th &nbsp;
 				%th &nbsp;
 				%th &nbsp;
-				= content_tag(:th, ('&nbsp;').html_safe) if attributes.include?('title')
+				= content_tag(:th, ('&nbsp;').html_safe) if attributes.include?('position')
 		%tbody#sortable{ :data => {:sort_url => url_for(action: 'sort', controller: params[:controller], only_path: false)} }
 			- collection.each do |resource|
 				%tr[resource]{odd_or_even}
@@ -21,7 +21,7 @@
 						= link_to 'edit', edit_resource_path(resource), :class => 'edit ir'
 					%td.icon_link
 						= link_to 'destroy', resource_path(resource), :method => :delete, confirm: "Are you sure?", :class => 'destroy ir'
-					- if attributes.include?('title')
+					- if attributes.include?('position')
 						%td.icon_link
 							.handle.ir= "[drag]"
 

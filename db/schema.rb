@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(:version => 20111110235611) do
   add_index "assets", ["type"], :name => "index_assets_on_type"
 
   create_table "clients", :force => true do |t|
+    t.integer  "position"
     t.string   "organization"
     t.string   "first_name"
     t.string   "last_name"
@@ -59,7 +60,7 @@ ActiveRecord::Schema.define(:version => 20111110235611) do
     t.string   "title"
     t.string   "sub_title"
     t.text     "body"
-    t.date     "publish_date"
+    t.datetime "publish_date"
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -68,6 +69,7 @@ ActiveRecord::Schema.define(:version => 20111110235611) do
   add_index "posts", ["user_id"], :name => "index_posts_on_user_id"
 
   create_table "projects", :force => true do |t|
+    t.integer  "position"
     t.string   "title"
     t.text     "description"
     t.string   "url"
@@ -81,6 +83,7 @@ ActiveRecord::Schema.define(:version => 20111110235611) do
   add_index "projects", ["user_id"], :name => "index_projects_on_user_id"
 
   create_table "services", :force => true do |t|
+    t.integer  "position"
     t.string   "name"
     t.text     "description"
     t.datetime "created_at"
@@ -88,6 +91,7 @@ ActiveRecord::Schema.define(:version => 20111110235611) do
   end
 
   create_table "skills", :force => true do |t|
+    t.integer  "position"
     t.string   "name"
     t.integer  "user_id"
     t.integer  "service_id"
