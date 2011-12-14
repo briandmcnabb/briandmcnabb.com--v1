@@ -13,8 +13,10 @@
 #
 
 class Project < ActiveRecord::Base
+  acts_as_list
+
   # Accessors
-  attr_accessible :title, :description, :url, :client_id, :images_attributes
+  attr_accessible :position, :title, :description, :url, :client_id, :images_attributes
 
   # Associations
   belongs_to :user
@@ -23,5 +25,8 @@ class Project < ActiveRecord::Base
 
   # Nested Models
   accepts_nested_attributes_for :images, :reject_if => :all_blank, :allow_destroy => true
+  
+  # Scopes
+  default_scope order: 'position'
   
 end

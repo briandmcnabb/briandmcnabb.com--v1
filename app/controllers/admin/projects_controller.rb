@@ -10,11 +10,6 @@ class Admin::ProjectsController < Admin::ResourceController
   end
 
    protected
-
-   def collection
-     @projects ||= end_of_association_chain.order("position")
-   end
-   
    def assign_user 
      build_resource.user = current_user 
    end

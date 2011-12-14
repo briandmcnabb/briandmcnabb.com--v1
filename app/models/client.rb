@@ -14,8 +14,10 @@
 #
 
 class Client < ActiveRecord::Base
+  acts_as_list
+  
   # Accessors
-  attr_accessible :organization, :first_name, :last_name, :email, :url, :description, :client_logo_attributes, :service_tokens
+  attr_accessible :position, :organization, :first_name, :last_name, :email, :url, :description, :client_logo_attributes, :service_tokens
   attr_reader :service_tokens
   
   def service_tokens=(ids)
@@ -32,6 +34,10 @@ class Client < ActiveRecord::Base
 
   # Nested Models
   accepts_nested_attributes_for :client_logo, :reject_if => :all_blank, :allow_destroy => true
+  
+  
+  # Scopes
+  default_scope order: 'position'
 
 
   # Methods

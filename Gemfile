@@ -15,6 +15,7 @@ gem 'simple_form'
 gem 'nested_form', git: 'git://github.com/ryanb/nested_form.git'
 
 gem 'will_paginate', '~> 3.0'
+gem 'acts_as_list'
 
 gem 'devise'
 

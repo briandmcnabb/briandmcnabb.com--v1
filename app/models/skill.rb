@@ -11,8 +11,16 @@
 #
 
 class Skill < ActiveRecord::Base
+  acts_as_list
+  
+  # Accessors
+  attr_accessible :position, :name
+
+  # Associations
   belongs_to :user
   belongs_to :service
   
-  attr_accessible :name
+  # Scopes
+  default_scope order: 'position'
+  
 end

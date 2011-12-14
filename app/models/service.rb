@@ -10,8 +10,10 @@
 #
 
 class Service < ActiveRecord::Base
+  acts_as_list
+    
   # Accessors
-  attr_accessible :name, :description, :service_symbol_attributes, :skills_attributes
+  attr_accessible :position, :name, :description, :service_symbol_attributes, :skills_attributes
 
   # Associations
   has_one  :service_symbol, :as => :attachable, :dependent => :destroy
@@ -21,5 +23,8 @@ class Service < ActiveRecord::Base
   # Nested Models
   accepts_nested_attributes_for :service_symbol, :reject_if => :all_blank, :allow_destroy => true
   accepts_nested_attributes_for :skills, :reject_if => :all_blank, :allow_destroy => true
+  
+  # Scopes
+  default_scope order: 'position'
   
 end

@@ -14,14 +14,17 @@
 
 class Post < ActiveRecord::Base
   # Accessors
-  attr_accessible :title, :sub_title, :body, :publish_date
+  attr_accessible :title, :sub_title, :body, :published_at
 
   # Associations
   belongs_to :user
   
+  # Scopes
   scope :published, lambda { where("publish_date < ?", Time.now.to_date ) }
 
-#  def published_at=(date)
-#    Time.utc(date.year, date.month, date.day)
-#  end
+  # Methods
+  def published_at=(date)
+    Time.utc(date.year, date.month, date.day)
+  end
+  
 end

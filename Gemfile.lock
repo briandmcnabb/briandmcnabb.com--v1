@@ -47,6 +47,7 @@ GEM
       activesupport (= 3.1.1)
     activesupport (3.1.1)
       multi_json (~> 1.0)
+    acts_as_list (0.1.4)
     addressable (2.2.6)
     arel (2.2.1)
     bcrypt-ruby (3.0.1)
@@ -225,6 +226,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  acts_as_list
   annotate!
   capybara
   carrierwave

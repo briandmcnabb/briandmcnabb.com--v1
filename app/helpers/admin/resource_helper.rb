@@ -1,7 +1,7 @@
 module Admin::ResourceHelper
 
   def attributes
-    resource_class.attribute_names - %w(id created_at updated_at)
+    resource_class.attribute_names - %w(id position created_at updated_at)
   end
   
   def nested?(params)
