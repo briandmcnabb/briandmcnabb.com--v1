@@ -1,5 +1,4 @@
-class Admin::ConnectionsController < Admin::ApplicationController::Base
-
+class Admin::ConnectionsController < Admin::ApplicationController
   def index
     
   end
