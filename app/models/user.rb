@@ -25,7 +25,7 @@ class User < ActiveRecord::Base
   attr_accessible :email, :password, :password_confirmation, :first_name, :last_name, :description, :avatar_attributes, :resume_attributes
   
   # Devise Modules
-  devise :database_authenticatable, :trackable, :validatable, :timeoutable, :lockable, :registerable
+  devise :database_authenticatable, :trackable, :validatable, :timeoutable, :lockable
   
   # Associations
   has_one   :avatar, :as => :attachable, :dependent => :destroy
@@ -35,6 +35,7 @@ class User < ActiveRecord::Base
   has_many  :clients, :through => :projects, :dependent => :destroy
   has_many  :skills, :dependent => :destroy
   has_many  :services, :through => :skills, :dependent => :destroy
+  has_many  :connections, :dependent => :destroy
 
   # Nested Models
   accepts_nested_attributes_for :avatar, :reject_if => :all_blank, :allow_destroy => true

@@ -1,7 +1,7 @@
 = simple_nested_form_for [ :admin, resource ] do |f|
 	= f.input :title
 	= f.input :sub_title
-	= f.input :publish_date, :as => :string
+	= f.input :publish, as: :string
 	= f.input :body
 	= f.button :submit, "submit"
 	
@@ -10,4 +10,7 @@
 
 - content_for :javascript do
 	- javascript_tag do
-		= "$(function() { $('#post_publish_date').datepicker({ dateFormat: 'yy-mm-dd' }) });"
+		= "$(function() { $('#post_publish').datepicker({ dateFormat: 'M d, yy' }) });"
+
+
+-# 'MM d, yy'

@@ -18,6 +18,7 @@ gem 'will_paginate', '~> 3.0'
 gem 'acts_as_list'
 
 gem 'devise'
+gem 'omniauth-twitter'
 
 gem 'rmagick'
 gem 'carrierwave'

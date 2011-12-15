@@ -23,9 +23,9 @@ class PostPresenter < BasePresenter
   end
 
   # Change publish_date back to a datetime and the set getter and setter methods for published_at field
-  def publish_date
-    handle_none post.publish_date do
-      time_tag(post.publish_date, post.publish_date.strftime('%b.%d.%Y'), pubdate: true)
+  def published_at
+    handle_none post.published_at do
+      time_tag(post.published_at, post.published_at.strftime('%b.%d.%Y'), pubdate: true)
     end  
   end
   

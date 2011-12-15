@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111110235611) do
+ActiveRecord::Schema.define(:version => 20111215075859) do
 
   create_table "assets", :force => true do |t|
     t.string   "type",            :null => false
@@ -47,6 +47,17 @@ ActiveRecord::Schema.define(:version => 20111110235611) do
     t.integer "service_id"
   end
 
+  create_table "connections", :force => true do |t|
+    t.integer  "user_id"
+    t.string   "provider"
+    t.string   "uid"
+    t.string   "username"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "connections", ["user_id"], :name => "index_connections_on_user_id"
+
   create_table "inquiries", :force => true do |t|
     t.string   "first_name"
     t.string   "last_name"
@@ -60,7 +71,7 @@ ActiveRecord::Schema.define(:version => 20111110235611) do
     t.string   "title"
     t.string   "sub_title"
     t.text     "body"
-    t.datetime "publish_date"
+    t.datetime "published_at"
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"

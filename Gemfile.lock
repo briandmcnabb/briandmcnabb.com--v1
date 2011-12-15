@@ -109,6 +109,7 @@ GEM
       haml (~> 3.0)
       railties (~> 3.0)
     has_scope (0.5.1)
+    hashie (1.2.0)
     hike (1.2.1)
     hirb (0.5.0)
     i18n (0.6.0)
@@ -135,6 +136,15 @@ GEM
     net-ssh (2.1.4)
     newrelic_rpm (3.3.0)
     nokogiri (1.5.0)
+    oauth (0.4.5)
+    omniauth (1.0.1)
+      hashie (~> 1.2)
+      rack
+    omniauth-oauth (1.0.0)
+      oauth
+      omniauth (~> 1.0)
+    omniauth-twitter (0.0.7)
+      omniauth-oauth (~> 1.0)
     orm_adapter (0.0.5)
     pg (0.11.0)
     polyglot (0.3.2)
@@ -245,6 +255,7 @@ DEPENDENCIES
   letter_opener
   nested_form!
   newrelic_rpm
+  omniauth-twitter
   pg
   rails (= 3.1.1)
   redcarpet!

@@ -8,6 +8,7 @@ end
 # Table name: skills
 #
 #  id         :integer         not null, primary key
+#  position   :integer
 #  name       :string(255)
 #  user_id    :integer
 #  service_id :integer

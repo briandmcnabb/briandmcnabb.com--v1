@@ -3,6 +3,7 @@
 # Table name: projects
 #
 #  id          :integer         not null, primary key
+#  position    :integer
 #  title       :string(255)
 #  description :text
 #  url         :string(255)

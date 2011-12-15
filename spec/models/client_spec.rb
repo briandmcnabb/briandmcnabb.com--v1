@@ -8,6 +8,7 @@ end
 # Table name: clients
 #
 #  id           :integer         not null, primary key
+#  position     :integer
 #  organization :string(255)
 #  first_name   :string(255)
 #  last_name    :string(255)
