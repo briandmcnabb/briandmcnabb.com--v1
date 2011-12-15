@@ -1,7 +1,5 @@
 Briandmcnabb::Application.routes.draw do
 
-  resources :connections
-
   # Backend Administrative Interface
   constraints subdomain: "admin" do
     scope module: "admin", as: "admin"  do
@@ -18,7 +16,7 @@ Briandmcnabb::Application.routes.draw do
         collection { post :sort }
       end
       match '/auth/:provider/callback' => 'connections#create'
-      resource :connections, only: [:index, :create, :destroy]
+      resources :connections, only: [:index, :create, :destroy]
       resource :user
       root to: "posts#index"
     end
