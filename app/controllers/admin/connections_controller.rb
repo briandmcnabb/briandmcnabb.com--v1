@@ -3,8 +3,8 @@ class Admin::ConnectionsController < Admin::ResourceController
   
   def create
     auth = request.env['omniauth.auth']
-    @connection = current_user.connections.new(provider: auth['provider'], uid: auth['uid'], username: auth['info']['nickname'] )
-    create!
+    @connection = current_user.connections.find_or_create_by_provider_and_uid(auth['provider'], auth['uid'], username: auth['info']['nickname'] )
+    create! { connections_url }
   end
   
   
