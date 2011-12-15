@@ -17,6 +17,7 @@ Briandmcnabb::Application.routes.draw do
       resources :posts do
         collection { post :sort }
       end
+      match '/auth/:provider/callback' => 'connections#create'
       resource :connections, only: [:index, :create, :destroy]
       resource :user
       root to: "posts#index"
