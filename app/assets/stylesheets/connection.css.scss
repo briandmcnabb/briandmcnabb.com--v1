@@ -1,8 +1,32 @@
 #connections {
-	.connection{
+	margin-bottom: 45px;
+	a.unconnected {
+		color: #222;
+		opacity: .75;
+		-webkit-transition: all 0.3s ease-out;
+	     -moz-transition: all 0.3s ease-out;
+	      -ms-transition: all 0.3s ease-out;
+	       -o-transition: all 0.3s ease-out;
+	          transition: all 0.3s ease-out;
+	}
+	a:hover { 
+		opacity: 1;
+	}
+	.connection {
 		position: relative;
+		display: block;
+		width: 360px;
+		margin: 10px auto;
+		padding: 15px;
+		border: 1px solid hsla(0, 0%, 0%, 0.045);
 		img {
 			float: left;
+		}
+		p {
+			float: left;
+			margin: 8px 0 0 20px;
+			font-size: 2em;
+			font-family: 'polaris';
 		}
 		.remove {
 			position: absolute; 
@@ -12,5 +36,14 @@
 			width:27px; height:27px; 
 			opacity: 0.25;
 		}
+		.remove:hover { 
+			opacity: 1; 
+		}
+	}
+	.unconnected {
+		background: hsla(0, 0%, 0%, 0.05);
+	}
+	.connected {
+		background: hsla(0, 0%, 100%, 0.25);
 	}
 }
