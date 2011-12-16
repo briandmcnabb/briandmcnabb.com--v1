@@ -1,4 +1,4 @@
-.connection
+%div[connection]
   = image_tag "#{connection.provider}.png", :size => "48x48", :alt => "#{connection.provider}"
-  = connection.provider.titleize
+  = connection.username
   = link_to "remove connection", admin_connection_path(connection), method: :delete, confirm: 'Are you sure you want to remove this connection?', class: "remove_connection ir"
