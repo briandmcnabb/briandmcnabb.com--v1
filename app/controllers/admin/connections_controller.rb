@@ -3,7 +3,7 @@ class Admin::ConnectionsController < Admin::ResourceController
   
   def index
     @connections = current_user.connections.all
-    @providers = %w(twitter github dribbble linkedin) - @connections.collect! { |connection| connection.provider  }
+    @providers = %w(twitter github dribbble linkedin) - @connections.collect { |connection| connection.provider  }
     index!
   end
   
