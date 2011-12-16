@@ -10,7 +10,7 @@
 				%th &nbsp;
 				%th &nbsp;
 				= content_tag(:th, ('&nbsp;').html_safe) if resource_class.attribute_names.include?('position')
-		%tbody#sortable{ :data => {:sort_url => url_for(action: 'sort', controller: params[:controller], only_path: false)} }
+		%tbody#sortable{ :data => {:sort_url => url_for(action: 'sort', controller: params[:controller], only_path: false) if resource_class.attribute_names.include?('position')} }
 			- collection.each do |resource|
 				%tr[resource]{odd_or_even}
 					- attributes.each do |attr|
