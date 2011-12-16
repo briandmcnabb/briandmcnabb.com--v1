@@ -30,11 +30,11 @@
 		}
 		.remove {
 			position: absolute; 
-			top: 25%; 
-			right: 5px;
+			top: 33%; 
+			right: 10px;
 			background: transparent image-url('remove_icon.png') no-repeat center center; 
 			width:27px; height:27px; 
-			opacity: 0.25;
+			opacity: 0.5;
 		}
 		.remove:hover { 
 			opacity: 1; 
