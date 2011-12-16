@@ -1,7 +1,7 @@
 #connections
   = render collection
   - @providers.each do |provider|
-    .connection
-      = link_to "/auth/#{provider}", class: "connection" do
+    .connection.clearfix
+      = link_to "/auth/#{provider}", class: 'connect' do
         = image_tag "#{provider}.png", :size => "48x48", :alt => "#{provider}"
-      %p= "Connect with #{provider}."
+      %p= "add connection"

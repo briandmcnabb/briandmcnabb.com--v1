@@ -1,10 +1,13 @@
 #connections {
 	.connection{
 		position: relative;
+		img {
+			float: left;
+		}
 		.remove {
 			position: absolute; 
-			top: -10px; 
-			right: -10px; 
+			top: 25%; 
+			right: 5px;
 			background: transparent image-url('remove_icon.png') no-repeat center center; 
 			width:27px; height:27px; 
 			opacity: 0.25;
