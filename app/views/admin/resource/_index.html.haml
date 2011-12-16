@@ -23,5 +23,5 @@
             %td.icon_link= link_to 'destroy', resource_path(resource), method: :delete, confirm: "Are you sure?", class: 'destroy ir'
           - if sortable?
             %td.icon_link= content_tag(:span, "[drag]", class: 'handle ir')
-
+            
   = will_paginate collection
