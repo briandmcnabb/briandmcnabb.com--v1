@@ -15,11 +15,11 @@
         %tr[resource]{odd_or_even}
           - attributes.each do |attr|
             %td= attr.end_with?('_id') ? resource.public_send(attr.gsub('_id', '')).to_s : resource.public_send(attr).to_s.truncate(20)
-          - if resource_path(resource)
+          - if defined?(resource_path(resource))
             %td.icon_link= link_to 'show', resource_path(resource), class: 'show ir'
-          - if edit_resource_path(resource)
+          - if defined?(edit_resource_path(resource))
             %td.icon_link= link_to 'edit', edit_resource_path(resource), class: 'edit ir'
-          - if resource_path(resource)
+          - if defined?(resource_path(resource))
             %td.icon_link= link_to 'destroy', resource_path(resource), method: :delete, confirm: "Are you sure?", class: 'destroy ir'
           - if sortable?
             %td.icon_link= content_tag(:span, "[drag]", class: 'handle ir')
