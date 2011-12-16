@@ -1,0 +1,9 @@
+= render collection
+
+- collection.collect! { |resource| resource.provider  }
+
+- (%w(twitter github dribbble linkedin) - collection).each do |provider|
+  .connection
+    = link_to "/auth/#{provider}", class: "connection" do
+      = image_tag "#{provider}.png", :size => "48x48", :alt => "#{provider}"
+    %p= "Connect with #{provider}."

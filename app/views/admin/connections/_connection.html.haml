@@ -1,0 +1,4 @@
+.connection
+  = image_tag "#{connection.provider}.png", :size => "48x48", :alt => "#{connection.provider}"
+  = connection.provider.titleize
+  = link_to "remove connection", connection, confirm: 'Are you sure you want to remove this connection?', method: :delete, class: "remove_nested_fields"
