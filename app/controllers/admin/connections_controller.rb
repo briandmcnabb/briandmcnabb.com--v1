@@ -9,10 +9,7 @@ class Admin::ConnectionsController < Admin::ResourceController
   
   def create
     auth = request.env['omniauth.auth']
-    provider = auth['provider']
-    uid = auth['uid']
-    urls = auth['info']['urls']
-    current_user.connections.find_or_create_by_provider_and_uid(provider, uid, username: profile_url(urls, provider))
+    current_user.connections.find_or_create_by_provider_and_uid(auth['provider'], auth['uid'], username: profile_url(auth['info']['urls'], auth['provider']))
     redirect_to admin_connections_url
   end
   
