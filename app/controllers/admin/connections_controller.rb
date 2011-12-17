@@ -8,9 +8,9 @@ class Admin::ConnectionsController < Admin::ResourceController
   end
   
   def create
-    auth = request.env['omniauth.auth']
-    current_user.connections.find_or_create_by_provider_and_uid(auth['provider'], auth['uid'], username: profile_url(auth['info']['urls'], auth['provider']))
-    redirect_to admin_connections_url
+    render :text => request.env["rack.auth"].to_yaml
+    #current_user.connections.find_or_create_by_provider_and_uid(auth_hash['provider'], auth_hash['uid'], username: profile_url(auth_hash['info']['urls']))
+    #redirect_to admin_connections_url
   end
   
   def failure
@@ -22,8 +22,12 @@ class Admin::ConnectionsController < Admin::ResourceController
   def begin_of_association_chain
     current_user
   end
+  
+  def auth_hash
+    request.env['omniauth.auth']
+  end
 
-  def profile_url(urls, provider)
-    urls.select { |k,v| v if v && v.include?(provider) }.values[0]
+  def profile_url(urls)
+    urls.select { |k,v| v if v && v.include?(auth_hash['provider']) }.values[0]
   end
 end
