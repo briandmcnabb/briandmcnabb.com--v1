@@ -8,9 +8,8 @@ class Admin::ConnectionsController < Admin::ResourceController
   end
   
   def create
-    render text: auth_hash.to_yaml
-    #current_user.connections.find_or_create_by_provider_and_uid(auth_hash['provider'], auth_hash['uid'], username: profile_url(auth_hash['info']['urls']))
-    #redirect_to admin_connections_url
+    current_user.connections.where(provider: provider, uid: uid) || current_user.connections.create(provider: provider, uid: uid, username: profile_url)
+    redirect_to admin_connections_url
   end
   
   def failure
@@ -26,8 +25,16 @@ class Admin::ConnectionsController < Admin::ResourceController
   def auth_hash
     request.env['omniauth.auth']
   end
+  
+  def uid
+    auth_hash['uid']
+  end
+  
+  def provider
+    auth_hash['provider']
+  end
 
-  def profile_url(urls)
-    urls.select { |k,v| v if v && v.include?(auth_hash['provider']) }.values[0]
+  def profile_url
+    auth_hash['info']['urls'].select { |k,v| v if v && v.include?(auth_hash['provider']) }.values[0]
   end
 end
