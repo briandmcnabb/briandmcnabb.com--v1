@@ -16,6 +16,9 @@ class Admin::ConnectionsController < Admin::ResourceController
     redirect_to admin_connections_url
   end
   
+  def failure
+    render :text => request.env["rack.auth"].to_yaml
+  end
   
   protected
   
