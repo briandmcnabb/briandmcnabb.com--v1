@@ -8,7 +8,7 @@ class Admin::ConnectionsController < Admin::ResourceController
   end
   
   def create
-    current_user.connections.where(provider: provider, uid: uid) || current_user.connections.create(provider: provider, uid: uid, username: profile_url)
+    current_user.connections.find_or_create_by_provider_and_uid(provider, uid, username: profile_url)
     redirect_to admin_connections_url
   end
   
@@ -27,7 +27,7 @@ class Admin::ConnectionsController < Admin::ResourceController
   end
   
   def uid
-    auth_hash['uid']
+    auth_hash['uid'].to_s
   end
   
   def provider
