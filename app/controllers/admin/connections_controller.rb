@@ -8,13 +8,12 @@ class Admin::ConnectionsController < Admin::ResourceController
   end
   
   def create
-    render :text => request.env["rack.auth"].to_yaml
-    #current_user.connections.find_or_create_by_provider_and_uid(auth_hash['provider'], auth_hash['uid'], username: profile_url(auth_hash['info']['urls']))
-    #redirect_to admin_connections_url
+    current_user.connections.find_or_create_by_provider_and_uid(auth_hash['provider'], auth_hash['uid'], username: profile_url(auth_hash['info']['urls']))
+    redirect_to admin_connections_url
   end
   
   def failure
-    render :text => request.env["rack.auth"].to_yaml
+    redirect_to root_url, :alert => "Authentication error: #{params[:message].humanize}"
   end
   
   protected
