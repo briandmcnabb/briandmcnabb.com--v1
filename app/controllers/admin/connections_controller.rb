@@ -27,6 +27,6 @@ class Admin::ConnectionsController < Admin::ResourceController
   end
 
   def profile_url(urls, provider)
-    urls.select { |k,v| v if v.include?(provider) }.values[0]
+    urls.select { |k,v| v if v && v.include?(provider) }.values[0]
   end
 end
