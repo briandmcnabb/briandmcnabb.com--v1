@@ -8,8 +8,9 @@ class Admin::ConnectionsController < Admin::ResourceController
   end
   
   def create
-    current_user.connections.find_or_create_by_provider_and_uid(auth_hash['provider'], auth_hash['uid'], username: profile_url(auth_hash['info']['urls']))
-    redirect_to admin_connections_url
+    render text: auth_hash.to_yaml
+    #current_user.connections.find_or_create_by_provider_and_uid(auth_hash['provider'], auth_hash['uid'], username: profile_url(auth_hash['info']['urls']))
+    #redirect_to admin_connections_url
   end
   
   def failure
