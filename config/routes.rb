@@ -15,8 +15,8 @@ Briandmcnabb::Application.routes.draw do
       resources :posts do
         collection { post :sort }
       end
-      match '/auth/:provider/callback' => 'connections#create'
-      match '/auth/failure' => 'connections#failure'
+      match '/auth/:provider/callback' => 'omniauth#callback'
+      match '/auth/failure' => 'omniauth#failure'
       resources :connections, only: [:index, :create, :destroy]
       resource :user
       root to: "posts#index"

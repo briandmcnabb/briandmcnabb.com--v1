@@ -1,13 +1,14 @@
 #connections {
-	margin-bottom: 45px;
+	width: 360px;
+	margin: 0 auto 45px;
 	a.unconnected {
 		color: #222;
 		opacity: .75;
-		-webkit-transition: all 0.2s ease-out;
-	     -moz-transition: all 0.2s ease-out;
-	      -ms-transition: all 0.2s ease-out;
-	       -o-transition: all 0.2s ease-out;
-	          transition: all 0.2s ease-out;
+		-webkit-transition: all 0.15s ease-out;
+	     -moz-transition: all 0.15s ease-out;
+	      -ms-transition: all 0.15s ease-out;
+	       -o-transition: all 0.15s ease-out;
+	          transition: all 0.15s ease-out;
 	}
 	a:hover { 
 		opacity: 1;
@@ -15,8 +16,7 @@
 	.connection {
 		position: relative;
 		display: block;
-		width: 360px;
-		margin: 10px auto;
+		margin-bottom: 10px;
 		padding: 15px;
 		border: 1px solid hsla(0, 0%, 0%, 0.045);
 		img {
@@ -46,4 +46,8 @@
 	.connected {
 		background: hsla(0, 0%, 100%, 0.25);
 	}
+	#new_connection {
+		padding: 15px 24px;
+	}
+	fieldset { margin: 0; padding: 0; border: none; width: 100%; }
 }

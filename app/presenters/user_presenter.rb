@@ -24,4 +24,17 @@ class UserPresenter < BasePresenter
     end
   end
   
+  def resume
+    handle_none(user.avatar, '') do
+      link_to 'resume', user.resume.asset_path_url, class: 'resume'
+    end
+  end
+  
+  def tweets
+    username = user.connections.where(provider: 'twitter').first.username.split('/').last
+    if username
+      twitter_feed(username)
+    end
+  end
+  
 end

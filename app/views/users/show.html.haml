@@ -6,11 +6,9 @@
     %footer
       %figure
         = present_user.avatar
-      = link_to 'resume', resource.resume.asset_path_url, class: 'resume' if resource.resume
+      = present_user.resume
       #social_buttons
         - resource.connections.each do |connection|
           = link_to connection.username, target: '_blank' do
             = image_tag "#{connection.provider}.png", size: "48x48"
-        = link_to 'http://dribbble.com/briandmcnabb', target: '_blank' do
-          = image_tag 'dribbble.png', size: '48x48'
-      = twitter_feed
+      = present_user.tweets

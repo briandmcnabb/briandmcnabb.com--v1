@@ -1,6 +1,9 @@
 #connections
   = render collection
+  
   - @providers.each do |provider|
     = link_to "/auth/#{provider}", class: "clearfix unconnected connection" do
       = image_tag "#{provider}.png", :size => "48x48", :alt => "#{provider}"
       %p= "connect to #{provider}"
+  
+  = render 'form'

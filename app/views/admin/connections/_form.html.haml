@@ -1,0 +1,6 @@
+= simple_form_for [:admin, Connection.new] do |f|
+  = link_to "Add Custom Connection", '#', id: 'unhide_form'
+  %fieldset.hidden
+    = f.input :provider, label: false, placeholder: "provider"
+    = f.input :username, label: false, placeholder: "profile url"
+    = f.button :submit, "submit"
