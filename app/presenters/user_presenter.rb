@@ -14,7 +14,7 @@ class UserPresenter < BasePresenter
   
   def description
     handle_none user.description do
-      user.description
+      render_markdown(user.description)
     end
   end
   
