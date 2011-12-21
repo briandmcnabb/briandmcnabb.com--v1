@@ -12,9 +12,15 @@ class UserPresenter < BasePresenter
     end
   end
   
-  def description
-    handle_none user.description do
-      render_markdown(user.description)
+  def headline
+    handle_none user.headline do
+      render_markdown(user.headline)
+    end
+  end
+  
+  def bio
+    handle_none user.bio do
+      render_markdown(user.bio)
     end
   end
   

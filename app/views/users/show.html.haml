@@ -2,13 +2,14 @@
 
 - present resource do |present_user|
   %section.clearfix[resource]
-    #description= present_user.description
+    = present_user.headline
+    = present_user.bio
     %footer
       %figure
         = present_user.avatar
       = present_user.resume
   #social_buttons
     - resource.connections.each do |connection|
-      = link_to connection.username, target: '_blank' do
+      = link_to connection.url, target: '_blank' do
         = image_tag "#{connection.provider}.png", size: "48x48"
   %section.tweets= present_user.tweets
