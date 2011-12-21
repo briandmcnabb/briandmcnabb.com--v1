@@ -52,6 +52,7 @@ ActiveRecord::Schema.define(:version => 20111215075859) do
     t.string   "provider"
     t.string   "uid"
     t.string   "username"
+    t.string   "url"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -116,7 +117,8 @@ ActiveRecord::Schema.define(:version => 20111215075859) do
   create_table "users", :force => true do |t|
     t.string   "first_name"
     t.string   "last_name"
-    t.text     "description"
+    t.text     "headline"
+    t.text     "bio"
     t.string   "email",                             :default => "", :null => false
     t.string   "encrypted_password", :limit => 128, :default => "", :null => false
     t.integer  "sign_in_count",                     :default => 0

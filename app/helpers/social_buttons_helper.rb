@@ -45,7 +45,7 @@ module SocialButtonsHelper
 			  type: 'profile',
 			  rpp: 5,
 			  interval: 30000,
-			  width: 224,
+			  width: 960,
 			  height: 300,
 			  theme: {
 			    shell: {

@@ -5,6 +5,7 @@ class CreateConnections < ActiveRecord::Migration
       t.string :provider
       t.string :uid
       t.string :username
+      t.string :url
 
       t.timestamps
     end

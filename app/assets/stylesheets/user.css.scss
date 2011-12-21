@@ -1,10 +1,22 @@
 section.user { padding-left: 15px;
-	p { 
+	#description {
 		float: left;
-		width: 32em;
-		margin: 0;
-		font: normal 160%/1.55 'Vollkorn', serif;
-	}
+		width: 70%;
+		h2 {
+			font: normal 250%/1.55 'Vollkorn', serif;
+			margin: 0;
+		}
+		p { 
+			margin: 0 0 1.6em;
+			font: normal 160%/1.55 'Vollkorn', serif;
+			-moz-column-count: 2;
+			-moz-column-gap: 20px;
+			-webkit-column-count: 2;
+			-webkit-column-gap: 20px;
+			column-count: 2;
+			column-gap: 20px;
+		}
+	}		
 	footer { 
 		float: right;
 		margin: 0;
@@ -45,6 +57,9 @@ section.user { padding-left: 15px;
 			padding: 0 6px;
 		}
 	}
+}
+
+section.tweets {
 	.twtr-widget {
 		.twtr-hd {
 			display: none;
