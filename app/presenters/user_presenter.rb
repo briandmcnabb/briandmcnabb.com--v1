@@ -23,7 +23,7 @@ class UserPresenter < BasePresenter
   end
   
   def phone_number
-    handle_none user.phone_number do
+    handle_none(user.phone_number, '') do
       num = user.phone_number
       "#{num[0..2]}.#{num[3..5]}.#{num[6..9]}"
     end
