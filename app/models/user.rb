@@ -22,7 +22,7 @@
 
 class User < ActiveRecord::Base
   # Accessors
-  attr_accessible :email, :password, :password_confirmation, :first_name, :last_name, :description, :avatar_attributes, :resume_attributes
+  attr_accessible :email, :password, :password_confirmation, :first_name, :last_name, :headline, :bio, :avatar_attributes, :resume_attributes
   
   # Devise Modules
   devise :database_authenticatable, :trackable, :validatable, :timeoutable, :lockable

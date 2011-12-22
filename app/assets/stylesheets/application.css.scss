@@ -91,12 +91,6 @@ body {
 		-webkit-border-radius: 0 0 75px 75px; 
 			 -moz-border-radius: 0 0 75px 75px; 
 						border-radius: 0 0 75px 75px;
- /*
-			 -webkit-mask-image: image-url('mask-image.png');
-			 		 	-o-mask-image: image-url('mask-image.png');
-			 	  -moz-mask-image: image-url('mask-image.png');
-							 mask-image: image-url('mask-image.png');
- */
 }
 
 #logout_link  {
@@ -126,14 +120,59 @@ body {
 		}
 		nav a:hover { color: #d45848; } 
 	}
-	header:after { content: ""; display: block; width: 100%; height: 15px; background: #17395c;
- /*
-								 -webkit-mask-image: image-url('mask-image.png');
-	 							 -o-mask-image: image-url('mask-image.png');
-								 -moz-mask-image: image-url('mask-image.png');
-			 					 mask-image: image-url('mask-image.png'); 
-	*/
-	}
+	header:after { content: ""; display: block; width: 100%; height: 15px; background: #17395c; }
 }
 
-footer { margin: 12px 0; }
+#container > footer { 
+	position: relative;
+	background: transparent image-url('bg_pattern_2.png') repeat;
+	margin: 0;
+	padding: 30px 0 20px;
+	h6 {
+		margin: 0 0 15px;
+		font: normal 165% 'Vollkorn', serif;
+	}
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+	li {
+		margin: .25em 0;
+	}
+	#contact {
+		float: left;
+		width: 25%;
+		margin: 0 2% 0 8.5%;
+	}
+	#social {
+		float: left;
+		width: 25%;
+		margin: 0 2%;
+		a {
+			color: #222;
+		}
+		img{
+			float: left;
+			padding-right: 5px;
+		}
+		p {
+			margin: 0;
+			padding-top: 2px;
+		}
+	}
+	#legal {
+		float: left;
+		width: 25%;		
+		margin: 0 8.5% 0 2%;
+	}	
+}
+
+#container > footer:before {
+	content: ""; 
+	display: block; 
+	position: absolute;
+	top: -5px;
+	width: 100%;
+	border-bottom: 5px double hsla(0, 0%, 0%, 0.25);
+}

@@ -1,21 +1,39 @@
 - content_for :content do
-	#container
-		%section#masthead.clearfix
-			%header.clearfix
-				%h1= yield(:title) if show_title?
-				%nav.horizontal
-					%ul
-						- unless current_page?(posts_path)	
-							%li= link_to "blog", posts_path
-						- unless current_page?(user_path)	
-							%li= link_to "about", user_path
-						- unless current_page?(clients_path)	
-							%li= link_to "work", clients_path
-						- unless current_page?(services_path)	
-							%li= link_to "services", services_path
-	
-		= content_for?(:body) ? yield(:body) : yield
-			
-		%footer
-	
+  #container
+    %section#masthead.clearfix
+      %header.clearfix
+        %h1= yield(:title) if show_title?
+        %nav.horizontal
+          %ul
+            - unless current_page?(posts_path)	
+              %li= link_to "blog", posts_path
+            - unless current_page?(user_path)	
+              %li= link_to "about", user_path
+            - unless current_page?(clients_path)	
+              %li= link_to "work", clients_path
+            - unless current_page?(services_path)	
+              %li= link_to "services", services_path
+          
+    = content_for?(:body) ? yield(:body) : yield
+  
+    - present User.first do |present_user|  	
+      %footer.clearfix
+        %ul#contact
+          %li
+            %h6 Contact
+          %li= present_user.full_name
+          %li= present_user.email
+          %li 312.884.9353
+        %ul#social
+          %li
+            %h6 Social
+          - resource.connections.each do |connection|
+            %li
+              = link_to connection.url, target: '_blank' do
+                = image_tag "#{connection.provider}.png", size: "18x18"
+                %p= connection.provider.capitalize
+        %ul#legal
+          %li
+            %h6 Legal Stuff
+              
 = parent_layout 'boilerplate'        

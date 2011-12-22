@@ -1,15 +1,10 @@
 - title "About"
 
 - present resource do |present_user|
-  %section.clearfix[resource]
-    = present_user.headline
-    = present_user.bio
-    %footer
-      %figure
-        = present_user.avatar
+  %section#user
+    %header.clearfix
+      = present_user.avatar
       = present_user.resume
-  #social_buttons
-    - resource.connections.each do |connection|
-      = link_to connection.url, target: '_blank' do
-        = image_tag "#{connection.provider}.png", size: "48x48"
-  %section.tweets= present_user.tweets
+      = present_user.headline
+    = present_user.bio
+    = present_user.tweets

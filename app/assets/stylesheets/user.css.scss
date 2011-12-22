@@ -1,71 +1,94 @@
-section.user { padding-left: 15px;
-	#description {
-		float: left;
-		width: 70%;
-		h2 {
-			font: normal 250%/1.55 'Vollkorn', serif;
-			margin: 0;
+#user {
+	header {
+		margin-bottom: 15px;
+		padding: 0 15px;
+	}
+	
+	#headline {
+		h1 {
+			margin: 50px 0 75px;
+			font: normal 265%/1.55 'Vollkorn', serif;
 		}
+		h2 {
+			margin: 0;
+			font: normal 240%/1.55 'Vollkorn', serif;
+		}	
+	}
+	
+	figure { 
+		float: right;
+		margin-left: 15px;
+		padding: 10px;
+		background-color: hsla(32, 88%, 97%, 1);
+		border: 1px solid hsla(0, 0%, 89%, 0.8);
+		img {
+			border: 1px solid hsla(0, 0%, 73%, 0.05);
+		}	
+	}
+	
+	#bio {
+		margin-bottom: 20px;
+		border-bottom: 5px double hsla(0, 0%, 0%, 0.25);
+		padding: 0 15px 12px;
+		-moz-column-count: 2;
+		-moz-column-gap: 2em;
+		-webkit-column-count: 2;
+		-webkit-column-gap: 2em;
+		column-count: 2;
+		column-gap: 2em;
 		p { 
 			margin: 0 0 1.6em;
 			font: normal 160%/1.55 'Vollkorn', serif;
-			-moz-column-count: 2;
-			-moz-column-gap: 20px;
-			-webkit-column-count: 2;
-			-webkit-column-gap: 20px;
-			column-count: 2;
-			column-gap: 20px;
 		}
-	}		
-	footer { 
-		float: right;
-		margin: 0;
-		background: hsla(0, 100%, 100%, 0.6) url(/assets/bg_pattern_2.png) repeat;
-		padding: 20px;
-		border: 1px solid hsla(0, 0%, 0%, 0.035);
-		figure { 
-			padding: 10px;
-			background-color: hsla(32, 88%, 97%, 1);
-			border: 1px solid hsla(0, 0%, 89%, 0.8);
-		}
-		img {
-			border: 1px solid hsla(0, 0%, 73%, 0.05);
-		}
-		a.resume {
-			display: inline-block;
-			width: 208px;
-			margin: 15px 7px 0;
-			background: hsl(7, 62%, 52%);
-			padding-top: 5px;
-			border: 1px solid transparent;
-			color: #222;
-			text-align: center;
-			font-family: 'airplane', sans-serif;
-			font-size: 230%;
-			line-height: 1.5em;
-		}
-		a.resume:hover {
-			border: 1px solid hsl(7, 62%, 45%);
-			background-image: -webkit-linear-gradient(top, transparent, hsla(0, 0%, 0%, 0.05));
-			background-image:    -moz-linear-gradient(top, transparent, hsla(0, 0%, 0%, 0.05));
-			background-image:      -o-linear-gradient(top, transparent, hsla(0, 0%, 0%, 0.05));
-			background-image:     -ms-linear-gradient(top, transparent, hsla(0, 0%, 0%, 0.05));
-			background-image:         linear-gradient(top, transparent, hsla(0, 0%, 0%, 0.05));
-		}
-		#social_buttons {
-			margin: 15px 0;
-			padding: 0 6px;
-		}
+	}
+	#tweets {
+		margin-bottom: 15px;
+		padding: 0 15px 45px;
+	}	
+}
+
+.twtr-widget {
+	.twtr-hd, .twtr-ft {
+		display: none;
+	}
+	.twtr-timeline {
+		height: auto;
+		-webkit-border-radius: 0; 
+			 -moz-border-radius: 0; 
+						border-radius: 0;
+	}
+	.twtr-tweet {
+		margin-bottom: 5px;
+		padding: 14px 12px;
+		border: 1px solid hsla(0, 0%, 0%, 0.03);
+		background-color: hsla(0, 0%, 100%, .4);
+	}
+	p {
+		font-size: 1.125em;
 	}
 }
 
-section.tweets {
-	.twtr-widget {
-		.twtr-hd {
-			display: none;
-		}
-		p {
-			font-size: 1em;
-		}
+
+footer {
+	a.resume {
+		display: inline-block;
+		width: 208px;
+		margin: 15px 7px 0;
+		background: hsl(7, 62%, 52%);
+		padding-top: 5px;
+		border: 1px solid transparent;
+		color: #222;
+		text-align: center;
+		font-family: 'airplane', sans-serif;
+		font-size: 230%;
+		line-height: 1.5em;
+	}
+	a.resume:hover {
+		border: 1px solid hsl(7, 62%, 45%);
+		background-image: -webkit-linear-gradient(top, transparent, hsla(0, 0%, 0%, 0.05));
+		background-image:    -moz-linear-gradient(top, transparent, hsla(0, 0%, 0%, 0.05));
+		background-image:      -o-linear-gradient(top, transparent, hsla(0, 0%, 0%, 0.05));
+		background-image:     -ms-linear-gradient(top, transparent, hsla(0, 0%, 0%, 0.05));
+		background-image:         linear-gradient(top, transparent, hsla(0, 0%, 0%, 0.05));
 	}
 }

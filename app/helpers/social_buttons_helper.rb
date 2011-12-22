@@ -45,21 +45,21 @@ module SocialButtonsHelper
 			  type: 'profile',
 			  rpp: 5,
 			  interval: 30000,
-			  width: 960,
-			  height: 300,
+			  width: 'auto',
+			  height: 'auto',
 			  theme: {
 			    shell: {
-			      background: '#ecf0d7',
-			      color: '#ecf0d7'
+			      background: 'transparent',
+			      color: 'transparent'
 			    },
 			    tweets: {
-			      background: '#ecf0d7',
+			      background: 'transparent',
 			      color: '#222222',
 			      links: '#d14c3a'
 			    }
 			  },
 			  features: {
-			    scrollbar: true,
+			    scrollbar: false,
 			    loop: false,
 			    live: true,
 			    behavior: 'all'

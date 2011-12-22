@@ -1,17 +1,18 @@
 = simple_nested_form_for [ :admin, resource ], url: resource_path, html: { multipart: true} do |f|
-	.clearfix	
-		%fieldset#left_column
-			= f.input :first_name
-			= f.input :last_name
-			= f.input :email
-			= f.input :headline
-			= f.input :bio
-		%fieldset#right_column
-			%legend Avatar
-			= f.simple_fields_for :avatar
-			= f.link_to_add( "upload an avatar", :avatar) unless resource.avatar
-		%fieldset#right_column
-			%legend Resume
-			= f.simple_fields_for :resume
-			= f.link_to_add( "uplaod a resume", :resume) unless resource.resume
-	= f.button :submit, "submit"
+  .clearfix	
+    %fieldset#left_column
+      %legend Info
+      = f.input :first_name
+      = f.input :last_name
+      = f.input :email
+      = f.input :headline
+      = f.input :bio
+    %fieldset#right_column
+      %legend Avatar
+      = f.simple_fields_for :avatar
+      = f.link_to_add( "upload an avatar", :avatar) unless resource.avatar
+    %fieldset#right_column
+      %legend Resume
+      = f.simple_fields_for :resume
+      = f.link_to_add( "uplaod a resume", :resume) unless resource.resume
+  = f.button :submit, "submit"
