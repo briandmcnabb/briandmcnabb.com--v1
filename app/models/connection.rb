@@ -20,7 +20,7 @@ class Connection < ActiveRecord::Base
   
   class << self
     def find_with_omniauth(omniauth)
-      where(provider: omniauth.provider, uid: omniauth.uid).first
+      where(provider: omniauth.provider, uid: omniauth.uid.to_s).first
     end
     
     def create_with_omniauth(auth_hash)
