@@ -50,7 +50,7 @@ class UserPresenter < BasePresenter
   end
   
   def resume
-    handle_none(user.avatar, '') do
+    handle_none(user.resume, '') do
       link_to 'resume', user.resume.asset_path_url, class: 'resume'
     end
   end
