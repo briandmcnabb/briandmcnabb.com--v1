@@ -1,4 +1,25 @@
-.project { 
-	p { padding-bottom:5px; }
-	img { margin: 5px; }
+.content-wrapper {
+	p { 
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		font-size: 150%;
+		padding: 10px 0 10px 10px;
+		background-color: #ecf0d7;
+		border-top:    1px solid hsla(0, 0%, 0%, .055);
+		border-left:   1px solid hsla(0, 0%, 0%, .050);
+		border-bottom: 1px solid hsla(0, 0%, 0%, .060);
+		span.arrows {
+			padding-left: 10px;
+		}
+	}
+}
+
+#gallery { 
+	margin: 40px auto;
+	padding: 0 7%;
+	img { 
+		margin: 0 10px;
+		
+	}
 }

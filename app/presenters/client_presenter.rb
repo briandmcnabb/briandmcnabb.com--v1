@@ -14,7 +14,8 @@ class ClientPresenter < BasePresenter
   
   def website
     handle_none client.url do
-      content_tag :p, ('website: ' + link_to(client.url, client.url)).html_safe
+      content_tag :p, ('website: ' + link_to(client.url, client.url) + content_tag(:span, '&#8250;&#8250;'.html_safe, class: 'arrows')).html_safe
+      
     end
   end
   
