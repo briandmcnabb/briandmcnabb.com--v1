@@ -8,3 +8,22 @@
       = present_user.headline
     = present_user.bio
     = present_user.tweets
+  %footer.clearfix
+    %ul#contact
+      %li
+        %h6 Contact
+      %li= present_user.full_name
+      %li= present_user.email
+      %li= present_user.phone_number
+    %ul#social
+      %li
+        %h6 Social
+      - resource.connections.each do |connection|
+        %li
+          = link_to connection.url, target: '_blank' do
+            = image_tag "#{connection.provider}.png", size: "18x18"
+            %p= connection.provider.capitalize
+    %ul#legal
+      %li
+        %h6 Legal Stuff
+  
