@@ -45,6 +45,7 @@ class BasePresenter
   end
   
   def snippet(text, length)
+    # truncate(text, length: length.to_sym, separator: ' ')
     snippet = text.split[0..(length-1)].join(" ")
     snippet = snippet << ellipsis_link if text.split.size > length
     snippet.html_safe

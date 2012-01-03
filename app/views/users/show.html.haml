@@ -21,7 +21,7 @@
       - resource.connections.each do |connection|
         %li
           = link_to connection.url, target: '_blank' do
-            = image_tag "#{connection.provider}.png", size: "18x18"
+            = image_tag "#{connection.provider}.png"
             %p= connection.provider.capitalize
     %ul#legal
       %li
