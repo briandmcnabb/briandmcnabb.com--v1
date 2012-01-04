@@ -22,10 +22,11 @@ gem 'omniauth-twitter'
 gem 'omniauth-github'
 gem 'omniauth-linkedin'
 
-gem 'rmagick'
-gem 'carrierwave'
 gem 'fog'
+gem 'asset_sync'
+gem 'carrierwave'
 
+gem 'rmagick'
 gem 'redcarpet', git: 'git://github.com/tanoku/redcarpet.git'
 gem "coderay", "~> 1.0.1"
 

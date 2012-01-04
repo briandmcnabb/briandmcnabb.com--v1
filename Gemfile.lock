@@ -50,6 +50,9 @@ GEM
     acts_as_list (0.1.4)
     addressable (2.2.6)
     arel (2.2.1)
+    asset_sync (0.2.3)
+      activemodel
+      fog
     bcrypt-ruby (3.0.1)
     builder (3.0.0)
     capybara (1.1.1)
@@ -265,6 +268,7 @@ PLATFORMS
 DEPENDENCIES
   acts_as_list
   annotate!
+  asset_sync
   capybara
   carrierwave
   coderay (~> 1.0.1)
