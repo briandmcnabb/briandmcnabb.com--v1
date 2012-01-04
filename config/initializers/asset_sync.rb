@@ -5,7 +5,7 @@ AssetSync.configure do |config|
   config.rackspace_username = ENV['RACKSPACE_USERNAME']
   config.rackspace_api_key  = ENV['RACKSPACE_API_KEY']
   
-  config.gzip_compression   = true
+  #config.gzip_compression   = true
   
   config.fail_silently      = true
 end
