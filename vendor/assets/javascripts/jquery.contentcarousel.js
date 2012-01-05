@@ -79,15 +79,8 @@
 							left	: cache.itemW + 'px',
 							width	: cache.itemW * 2 + 'px'
 						});
-						
-						// hide more link
-						aux.toggleMore( $item, false );
 					}
 				});
-			},
-			// show / hide the item's more button
-			toggleMore	: function( $item, show ) {
-				( show ) ? $item.find('a.expand').show() : $item.find('a.expand').hide();	
 			},
 			// close all the items
 			// the current one is animated
@@ -106,9 +99,6 @@
 					cache.expanded		= false;
 				});
 				
-				// show more link
-				aux.toggleMore( $openedItem, true );
-				
 				$wrapper.find('article').each(function(i) {
 					var $item	= $(this),
 						idx		= $item.index();
@@ -120,9 +110,6 @@
 						.end()
 						.css( 'left', ( ( cache.winpos - 1 ) - ( openedIdx - idx ) ) * cache.itemW + 'px' )
 						.show();
-						
-						// show more link
-						aux.toggleMore( $item, true );
 					}
 				});
 			},
@@ -195,7 +182,6 @@
 						$el.find('a.expand').live('click.contentcarousel', function(event) {
 							if(cache.isAnimating) return false;
 							cache.isAnimating	= true;
-							$(this).hide();
 							var $item	= $(this).closest('article');
 							aux.openItem( $wrapper, $item, settings, cache );
 							return false;

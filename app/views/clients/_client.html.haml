@@ -1,15 +1,21 @@
 - present client do |present_client|
-	%article[client]
-		%header
-			= present_client.logo
-			- client.services.each do |service|
-				%h3= service.name
-			= link_to 'more...', '#', :class => 'expand'
-		%section.content
-			.content-wrapper
-				= present_client.organization
-				#gallery	
-					- client.images.order("created_at").each do	|image|
-						= link_to image_tag(image.asset_path_url(:preview)), image.asset_path_url
-				= present_client.website
-				=link_to 'close', '#', :class => 'collapse'
+  %article[client]
+    %header
+      = link_to '#', :class => 'expand' do
+        = present_client.logo
+      %ul
+        .center_vertically
+          - client.services.each do |service|
+            %li
+              = image_tag service.service_symbol.asset_path_url(:thumb), size: "18x18"
+              = service.name
+    %section.content
+      .content-wrapper
+        = present_client.organization
+        = present_client.description
+        - if client.images.present?
+          #gallery
+            - client.images.order("created_at").each do	|image|
+              = link_to image_tag(image.asset_path_url(:preview)), image.asset_path_url
+        = present_client.website
+        = link_to 'close', '#', :class => 'collapse ir'

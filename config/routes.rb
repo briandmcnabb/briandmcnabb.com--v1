@@ -23,11 +23,11 @@ Briandmcnabb::Application.routes.draw do
     end
   end
 
-  devise_for :user, skip: :registrations
-  resource  :user, only: :show
-  resources :clients, only: :index
-  resources :posts, only: [:index, :show]
-  resources :services, only: [:index, :show]
+  devise_for :user,     skip: :registrations
+  resource   :user,     only: :show,           path: "/about"
+  resources  :clients,  only: :index,          path: "/work"
+  resources  :posts,    only: [:index, :show], path: "/blog/posts"
+  resources  :services, only: [:index, :show]
 
   # Dynamic Root Route
   root to: "users#show"
