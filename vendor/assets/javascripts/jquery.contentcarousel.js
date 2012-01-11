@@ -212,7 +212,7 @@
 						
 						// key navigate left, right, close
 						$(document).bind('keyup', function(event){
-							if (!$("#galleryShade").length > 0){
+							if (!$("#galleryViewport").length > 0){
 							  if(event.keyCode == 37){
 									if(cache.isAnimating) return false;
 									cache.isAnimating	= true;

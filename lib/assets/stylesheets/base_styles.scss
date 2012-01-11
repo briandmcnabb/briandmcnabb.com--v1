@@ -7,11 +7,11 @@
 
 
 /*----------------------------------
-  Navigation
+  Navigation & List Direction
 ---------------------------------*/
 nav a { text-decoration: none; }
-nav.horizontal ul, ul.horizontal { text-align: center; }
-nav.horizontal li, ul.horizontal li { display: inline; }
+.horizontal ul { text-align: center; }
+.horizontal li { display: inline; }
 
 
 /*----------------------------------

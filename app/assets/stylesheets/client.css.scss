@@ -50,7 +50,7 @@
 			padding:20px; 
 			border: 1px solid hsla(0, 0%, 0%, 0.045); 
 		}
-		ul {
+		ul.services {
 			display:table;
 			list-style: none;
 			margin-top: 30px;
@@ -148,6 +148,10 @@
 	-webkit-box-shadow: inset -1px -1px 0px hsla(0, 0%, 0%, 0.025);
 			moz-box-shadow: inset -1px -1px 0px hsla(0, 0%, 0%, 0.025);
 					box-shadow: inset -1px -1px 0px hsla(0, 0%, 0%, 0.025);
+	ul {
+		margin: 0;
+		padding: 0;
+	}
 	img { 
 		margin: 0 10px;
 	}
