@@ -1,12 +1,14 @@
 - title "WORK"
 
 - content_for :javascript do
-	:coffeescript
-		jQuery ($)->
-		  $("#clients").contentcarousel()
-		  $("#gallery a").touchGallery()
-		
-		
+  :coffeescript
+    jQuery ($)->
+      $("#clients").contentcarousel()
+      $("#gallery a").fancybox
+        prevEffect: 'none'
+        nextEffect: 'none'
+
+                
 %section#clients
-	.carousel
-		=render collection
+  .carousel
+    = render collection

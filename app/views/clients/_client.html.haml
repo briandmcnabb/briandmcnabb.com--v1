@@ -17,6 +17,6 @@
           #gallery.horizontal
             %ul
               - client.images.order("created_at").each do	|image|
-                %li= link_to image_tag(image.asset_path_url(:preview), alt: image.description), image.asset_path_url
+                %li= link_to image_tag(image.asset_path_url(:preview), alt: image.description), image.asset_path_url, rel: client.organization.parameterize, title: image.description
         = present_client.website
         = link_to 'close', '#', :class => 'collapse ir'
