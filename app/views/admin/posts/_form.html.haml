@@ -7,10 +7,3 @@
 	
 - content_for :head do
 	= stylesheet_link_tag "http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/themes/redmond/jquery-ui.css"
-
-- content_for :javascript do
-	- javascript_tag do
-		= "$(function() { $('#post_publish').datepicker({ dateFormat: 'M d, yy' }) });"
-
-
--# 'MM d, yy'

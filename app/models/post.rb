@@ -17,7 +17,7 @@ class Post < ActiveRecord::Base
   # Accessors
   attr_accessible :title, :sub_title, :body, :publish
   def publish
-    published_at.strftime("%b %-d, %Y")
+    published_at.try(:strftime, "%b %-d, %Y")
   end
 
   def publish=(date)

@@ -8,9 +8,12 @@
 			= f.input :email
 			= f.input :url
 			= f.input :description
-			= f.input :service_tokens, label: 'Services'#, input_html:{ data:{ autosuggest: Service.select('id, name') } }
+			= f.input :service_tokens, label: 'Services', input_html:{ data:{ source: Service.order(:name).map(&:name) } }
 		%fieldset#right_column
 			%legend Logo
 			= f.simple_fields_for :client_logo
 			= f.link_to_add( "add logo", :client_logo) unless resource.client_logo
 	= f.button :submit, "submit"
+	
+- content_for :head do
+	= stylesheet_link_tag "http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/themes/redmond/jquery-ui.css"
