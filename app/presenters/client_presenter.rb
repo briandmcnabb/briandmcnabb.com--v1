@@ -1,17 +1,19 @@
 class ClientPresenter < BasePresenter
-  
+
   def logo
     handle_none(client.client_logo, placeholder_image('269x269')) do
-      image_tag client.client_logo.asset_path_url
+      content_tag :div, class: 'logo' do
+        image_tag client.client_logo.asset_path_url
+      end
     end
   end
-  
+
   def organization
     handle_none client.organization do
       content_tag :h1, client.organization
     end
   end
-  
+
   def website
     handle_none client.url do
       link_to client.url, id: 'website' do
@@ -21,7 +23,7 @@ class ClientPresenter < BasePresenter
       end
     end
   end
-  
+
   def description
     handle_none client.description do
       content_tag :p, client.description
