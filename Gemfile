@@ -3,6 +3,8 @@ source 'http://rubygems.org'
 gem 'rails', '3.1.1'
 gem 'thin'
 
+gem 'heroku'
+
 gem 'haml'
 gem 'coffee-filter'
 gem 'jquery-rails'
@@ -50,7 +52,7 @@ end
 
 
 group :test do
-  gem 'sqlite3'  
+  gem 'sqlite3'
   gem 'rspec-rails'
   gem 'capybara'
   gem 'factory_girl_rails'
